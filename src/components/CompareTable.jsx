@@ -14,7 +14,7 @@ const ROWS = [
       `${formatParams(m.paramsB)}${m.activeParamsB != null ? ` (MoE·활성 ${m.activeParamsB}B)` : ''}`,
   },
   {
-    label: '필요 VRAM (4bit)',
+    label: '최소 사양 (4bit)',
     render: (m) => (m.paramsB != null ? `약 ${formatVram(m.paramsB)} · ${vramTier(m.paramsB).label}` : '—'),
   },
   {

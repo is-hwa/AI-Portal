@@ -31,7 +31,7 @@ function derivativeText(d) {
 }
 
 // 계열 하나를 카드 한 장으로 보여준다. 숫자 지표 대신 모델을 고를 때 실제로 묻는
-// 네 가지 — 무엇을 잘하나 / 내 PC에서 돌아가나 / 회사에서 써도 되나 / 왜 인기인가 —
+// 네 가지 — 무엇을 잘하나 / 최소 사양은 어떤가 / 회사에서 써도 되나 / 왜 인기인가 —
 // 에 답하는 게 목표다.
 export default function FamilyCard({ family, members = family.members, rank, compare }) {
   const [selectedId, setSelectedId] = useState(() => pickDefault(members).id)
@@ -113,7 +113,7 @@ export default function FamilyCard({ family, members = family.members, rank, com
             </Badge>
           ))}
         </Row>
-        <Row label="내 PC">
+        <Row label="최소 사양">
           {tier ? (
             <>
               <Badge className={TIER_TONE_CLASS[tier.tone]} title={tier.hint}>
