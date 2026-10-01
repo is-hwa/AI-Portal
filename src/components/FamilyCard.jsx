@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { classifyLicense, LICENSE_TONE_CLASS } from '../data/license'
-import { formatParams, formatVram, vramTier, TIER_TONE_CLASS } from '../data/paramTiers'
+import { formatParams, formatVram, vramTier, nativeBits, MIN_BITS, TIER_TONE_CLASS } from '../data/paramTiers'
 import { formatCount, daysAgo, specLabel, RELATION_LABEL } from '../utils/format'
 
 function Badge({ className, children, title }) {
@@ -20,6 +20,21 @@ function Row({ label, children }) {
   )
 }
 
+// 최소(4bit)·권장(원본 정밀도) 사양을 같은 모양으로 보여준다.
+function SpecRow({ label, paramsB, bits, note }) {
+  const tier = vramTier(paramsB, bits)
+  return (
+    <Row label={label}>
+      <Badge className={TIER_TONE_CLASS[tier.tone]} title={tier.hint}>
+        {tier.label}
+      </Badge>
+      <span className="text-xs text-slate-500">
+        {note} · 약 {formatVram(paramsB, bits)}
+      </span>
+    </Row>
+  )
+}
+
 function pickDefault(members) {
   return [...members].sort((a, b) => b.downloads - a.downloads)[0]
 }
@@ -31,12 +46,12 @@ function derivativeText(d) {
 }
 
 // 계열 하나를 카드 한 장으로 보여준다. 숫자 지표 대신 모델을 고를 때 실제로 묻는
-// 네 가지 — 무엇을 잘하나 / 최소 사양은 어떤가 / 회사에서 써도 되나 / 왜 인기인가 —
+// 네 가지 — 무엇을 잘하나 / 어떤 장비가 필요한가 / 회사에서 써도 되나 / 왜 인기인가 —
 // 에 답하는 게 목표다.
 export default function FamilyCard({ family, members = family.members, rank, compare }) {
   const [selectedId, setSelectedId] = useState(() => pickDefault(members).id)
   const model = members.find((m) => m.id === selectedId) ?? pickDefault(members)
-  const tier = vramTier(model.paramsB)
+  const bits = nativeBits(model)
   const license = classifyLicense(model.license)
   const isNew = daysAgo(model.createdAt) <= 30
   const ggufText = derivativeText(model.derivatives)
@@ -70,6 +85,8 @@ export default function FamilyCard({ family, members = family.members, rank, com
           <p className="truncate text-xs text-slate-400">
             {family.provider}
             {!family.knownOrg && ' · 개인·커뮤니티'}
+            {model.paramsB != null && ` · ${formatParams(model.paramsB)}`}
+            {model.activeParamsB != null && ` (MoE·활성 ${model.activeParamsB}B)`}
           </p>
         </div>
         {compare && (
@@ -113,22 +130,16 @@ export default function FamilyCard({ family, members = family.members, rank, com
             </Badge>
           ))}
         </Row>
-        <Row label="최소 사양">
-          {tier ? (
-            <>
-              <Badge className={TIER_TONE_CLASS[tier.tone]} title={tier.hint}>
-                {tier.label}
-              </Badge>
-              <span className="text-xs text-slate-500">
-                {formatParams(model.paramsB)}
-                {model.activeParamsB != null && ` (MoE·활성 ${model.activeParamsB}B)`} · 4bit 약{' '}
-                {formatVram(model.paramsB)}
-              </span>
-            </>
-          ) : (
-            <span className="text-xs text-slate-400">크기 정보 없음</span>
-          )}
-        </Row>
+        {model.paramsB != null ? (
+          <>
+            <SpecRow label="최소 사양" paramsB={model.paramsB} bits={MIN_BITS} note="4bit 양자화" />
+            <SpecRow label="권장 사양" paramsB={model.paramsB} bits={bits} note={`원본 ${bits}bit 그대로`} />
+          </>
+        ) : (
+          <Row label="필요 사양">
+            <span className="text-xs text-slate-400">모델 크기 정보가 없어 계산할 수 없습니다</span>
+          </Row>
+        )}
         <Row label="회사 사용">
           <Badge className={LICENSE_TONE_CLASS[license.tone]}>{license.label}</Badge>
           <span className="truncate text-xs text-slate-400">{model.license ?? '라이선스 표기 없음'}</span>

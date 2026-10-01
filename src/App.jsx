@@ -54,7 +54,7 @@ export default function App() {
         {tab === 'admin' && <Admin data={data} onCollected={reload} />}
       </main>
       <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
-        데이터 출처: HuggingFace 공개 API. 최소 사양은 4bit 양자화 기준 추정치이며, 라이선스는 실제 도입
+        데이터 출처: HuggingFace 공개 API. 최소 사양은 4bit 양자화, 권장 사양은 원본 정밀도 기준 추정치이며, 라이선스는 실제 도입
         전 원문을 꼭 확인하세요.
       </footer>
     </div>

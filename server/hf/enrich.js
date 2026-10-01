@@ -14,6 +14,30 @@ function paramsFromSafetensors(safetensors) {
   return Math.round((total / 1e9) * 100) / 100
 }
 
+// 원본이 어떤 정밀도로 공개됐는지. "권장 사양"(원본 그대로 실행)을 계산할 때 쓴다.
+// 대부분 BF16(16bit)이지만 DeepSeek처럼 FP8로 공개하는 곳도 있다. F32로 올라온 오래된
+// 모델도 실제로는 16bit로 돌리는 게 보통이라 16으로 본다. 섞여 있으면 판단하지 않는다.
+const DTYPE_BITS = { BF16: 16, F16: 16, F32: 16, F8_E4M3: 8, F8_E5M2: 8 }
+
+// 이름 끝에 양자화 표기가 붙은 리포(Qwen3-Coder-30B-A3B-Instruct-FP8 등)는 계보
+// 정보가 없어도 따로 16bit 원본이 있다는 뜻이라 원본 정밀도를 16bit로 본다. 처음부터
+// FP8로 공개한 모델(DeepSeek·MiniMax 등)은 이름에 표기가 없어 영향받지 않는다.
+const QUANT_NAME_SUFFIX = /[-_](fp8|int8|int4|awq|gptq|w8a8|w4a16)$/i
+
+function nativeBits(name, safetensors) {
+  if (QUANT_NAME_SUFFIX.test(name)) return 16
+  return nativeBitsFromSafetensors(safetensors)
+}
+
+function nativeBitsFromSafetensors(safetensors) {
+  const entries = Object.entries(safetensors?.parameters ?? {})
+  const total = safetensors?.total
+  if (!total || entries.length === 0) return null
+  const [dtype, count] = entries.sort((a, b) => b[1] - a[1])[0]
+  if (count / total < 0.9) return null
+  return DTYPE_BITS[dtype] ?? null
+}
+
 function repoName(id) {
   return id.split('/').slice(1).join('/')
 }
@@ -97,6 +121,7 @@ export async function enrichGroup(group, cache) {
     lastModified: detail.lastModified ?? null,
     gated: Boolean(detail.gated),
     paramsB,
+    nativeBits: nativeBits(name, detail.safetensors),
     activeParamsB: activeParamsFromName(name),
     license: licenseOf(detail),
     specialization: specialization.filter((s) => s !== '범용' || specialization.length === 1),

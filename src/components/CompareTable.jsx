@@ -1,6 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import { classifyLicense, LICENSE_TONE_CLASS } from '../data/license'
-import { formatParams, formatVram, vramTier } from '../data/paramTiers'
+import { formatParams, formatVram, vramTier, nativeBits, MIN_BITS } from '../data/paramTiers'
 import { formatCount, formatDate, specLabel } from '../utils/format'
 
 const COLORS = ['#4f46e5', '#059669', '#d97706']
@@ -15,7 +15,15 @@ const ROWS = [
   },
   {
     label: '최소 사양 (4bit)',
-    render: (m) => (m.paramsB != null ? `약 ${formatVram(m.paramsB)} · ${vramTier(m.paramsB).label}` : '—'),
+    render: (m) =>
+      m.paramsB != null ? `약 ${formatVram(m.paramsB, MIN_BITS)} · ${vramTier(m.paramsB, MIN_BITS).label}` : '—',
+  },
+  {
+    label: '권장 사양 (원본)',
+    render: (m) =>
+      m.paramsB != null
+        ? `약 ${formatVram(m.paramsB, nativeBits(m))} · ${vramTier(m.paramsB, nativeBits(m)).label} (${nativeBits(m)}bit)`
+        : '—',
   },
   {
     label: '회사 사용',

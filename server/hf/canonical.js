@@ -63,9 +63,17 @@ export function groupByRoot(rawModels, lineage) {
 
   for (const group of groups.values()) {
     // 대표 리포: 사람들이 실제로 받는 건 대개 Base가 아니라 Instruct라서 공식 리포 중
-    // 다운로드가 가장 많은 것을 쓴다. 공식 리포가 목록에 하나도 없으면 원본 자체.
-    group.official.sort((a, b) => (b.downloads ?? 0) - (a.downloads ?? 0))
-    group.repId = group.official[0]?.id ?? group.root
+    // 다운로드가 가장 많은 것을 쓴다. 단 제공사가 직접 올린 양자화본(…-FP8)은 원본보다
+    // 다운로드가 많아도 뒤로 미룬다 — 대표로 뽑히면 "원본 정밀도"가 8bit로 잘못 잡혀
+    // 권장 사양이 절반으로 계산된다. 공식 리포가 목록에 하나도 없으면 원본 자체.
+    const isQuantized = (m) => lineage.get(m.id)?.relation === 'quantized'
+    group.official.sort(
+      (a, b) => isQuantized(a) - isQuantized(b) || (b.downloads ?? 0) - (a.downloads ?? 0),
+    )
+    // 목록에 공식 양자화본만 걸리고 원본은 안 걸린 경우(…-122B-A10B-FP8만 트렌딩)엔
+    // 원본 리포를 대표로 삼는다.
+    const first = group.official[0]
+    group.repId = first && !isQuantized(first) ? first.id : group.root
     group.buzz = [...group.official, ...group.derivatives].reduce(
       (sum, m) => sum + (m.trendingScore ?? 0),
       0,

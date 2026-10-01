@@ -1,12 +1,21 @@
-// "내 PC에서 돌아가나"를 파라미터 수가 아니라 GPU 메모리(VRAM)로 답한다. 사람들은
-// "27B"보다 "24GB 그래픽카드면 된다"를 훨씬 쉽게 이해한다.
+// "돌리려면 어떤 장비가 필요한가"를 파라미터 수가 아니라 GPU 메모리(VRAM)로 답한다.
+// 사람들은 "27B"보다 "24GB 그래픽카드면 된다"를 훨씬 쉽게 이해한다.
+//
+// - 최소 사양: 4bit 양자화(GGUF Q4 등). 로컬에선 대부분 여기서부터 시도한다.
+// - 권장 사양: 원본 정밀도 그대로(대부분 16bit, 일부 8bit). 품질 손실 없이 서버에
+//   올릴 때 기준이다.
+// 둘 다 가중치 용량에 KV 캐시·활성값 몫으로 20%를 더한 값이고, 긴 문서를 넣거나
+// 여러 명이 동시에 쓰면 더 필요하다.
+export const MIN_BITS = 4
+const DEFAULT_NATIVE_BITS = 16
 
-// 4bit 양자화(파라미터당 0.5바이트) 기준 가중치 용량에 KV 캐시·활성값 몫으로 20%를
-// 더한 값. 로컬에선 대부분 4bit(GGUF Q4)부터 시도하기 때문에 이 기준으로 잡는다.
-// 컨텍스트 길이·배치에 따라 더 필요할 수 있어 하한 추정치로 봐야 한다.
-export function estimateVramGb(paramsB) {
+export function nativeBits(model) {
+  return model.nativeBits ?? DEFAULT_NATIVE_BITS
+}
+
+export function estimateVramGb(paramsB, bits = MIN_BITS) {
   if (paramsB == null) return null
-  return paramsB * 0.5 * 1.2
+  return paramsB * (bits / 8) * 1.2
 }
 
 export const VRAM_TIERS = [
@@ -19,8 +28,8 @@ export const VRAM_TIERS = [
   { maxGb: Infinity, label: '서버 여러 대', hint: '데이터센터 GPU 여러 장', tone: 'hard' },
 ]
 
-export function vramTier(paramsB) {
-  const gb = estimateVramGb(paramsB)
+export function vramTier(paramsB, bits = MIN_BITS) {
+  const gb = estimateVramGb(paramsB, bits)
   if (gb == null) return null
   return VRAM_TIERS.find((t) => gb <= t.maxGb)
 }
@@ -32,8 +41,8 @@ export function formatParams(paramsB) {
   return `${paramsB >= 10 ? Math.round(paramsB) : paramsB.toFixed(1)}B`
 }
 
-export function formatVram(paramsB) {
-  const gb = estimateVramGb(paramsB)
+export function formatVram(paramsB, bits = MIN_BITS) {
+  const gb = estimateVramGb(paramsB, bits)
   if (gb == null) return '—'
   if (gb < 1) return '1GB 미만'
   return gb >= 10 ? `${Math.round(gb)}GB` : `${gb.toFixed(1)}GB`
