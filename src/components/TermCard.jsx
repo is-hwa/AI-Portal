@@ -2,6 +2,7 @@ const CATEGORY_STYLES = {
   모델: 'bg-indigo-50 text-indigo-600',
   인프라: 'bg-emerald-50 text-emerald-600',
   학습방식: 'bg-orange-50 text-orange-600',
+  '로컬 실행': 'bg-sky-50 text-sky-600',
 }
 
 export default function TermCard({ term }) {

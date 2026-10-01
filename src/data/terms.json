@@ -94,5 +94,53 @@
     "category": "인프라",
     "definition": "클라우드 서버로 데이터를 보내지 않고 스마트폰, PC 등 기기 자체에서 AI를 실행하는 방식입니다. 인터넷 연결 없이도 작동하고 개인정보 보안에 유리합니다.",
     "example": "온디바이스 AI가 적용된 스마트폰은 통화 요약 기능을 인터넷 연결 없이도 처리할 수 있습니다."
+  },
+  {
+    "term": "VRAM (그래픽 메모리)",
+    "category": "로컬 실행",
+    "definition": "GPU에 달린 메모리입니다. 로컬 LLM은 모델 가중치를 통째로 VRAM에 올려야 빠르게 돌아가서, \"내 PC에서 돌아가나\"를 가르는 가장 중요한 숫자입니다.",
+    "example": "RTX 4060(8GB)이면 7~8B 모델, RTX 4090(24GB)이면 30B급 모델까지 4bit로 올릴 수 있습니다."
+  },
+  {
+    "term": "양자화 (Quantization)",
+    "category": "로컬 실행",
+    "definition": "모델 숫자의 정밀도를 낮춰(16bit → 4bit 등) 용량을 줄이는 기법입니다. 성능은 조금 떨어지지만 필요한 VRAM이 1/4 수준으로 줄어 일반 PC에서도 큰 모델을 돌릴 수 있습니다.",
+    "example": "이 포털의 \"필요 VRAM\"은 4bit 양자화 기준 추정치입니다."
+  },
+  {
+    "term": "GGUF",
+    "category": "로컬 실행",
+    "definition": "llama.cpp·Ollama·LM Studio가 쓰는 양자화 모델 파일 형식입니다. 원본 모델의 GGUF 버전이 많다는 건 그만큼 사람들이 로컬에서 많이 돌린다는 뜻입니다.",
+    "example": "Ollama에서 \"ollama run qwen3\"으로 받는 모델도 내부적으로는 GGUF 파일입니다."
+  },
+  {
+    "term": "MoE (전문가 혼합, Mixture of Experts)",
+    "category": "모델",
+    "definition": "모델을 여러 \"전문가\"로 나눠 질문마다 일부만 계산하는 구조입니다. 이름의 \"35B-A3B\"는 전체 350억 개 중 30억 개만 매번 쓴다는 뜻이라, 크기에 비해 빠르지만 메모리는 전체 크기만큼 필요합니다.",
+    "example": "Qwen3-30B-A3B는 30B 모델만큼 VRAM이 필요하지만 속도는 3B 모델에 가깝습니다."
+  },
+  {
+    "term": "원본 모델 vs 파생 모델",
+    "category": "로컬 실행",
+    "definition": "원본은 제공사(Qwen·Meta·Google 등)가 직접 공개한 모델이고, 파생은 다른 사람이 그걸 양자화·파인튜닝·병합해서 다시 올린 리포입니다. 이 포털은 파생 리포를 원본 아래로 묶어서 보여줍니다.",
+    "example": "HF 트렌딩 상위의 \"...-GGUF\", \"...-Uncensored\" 리포는 대부분 파생 모델입니다."
+  },
+  {
+    "term": "임베딩 모델 (Embedding Model)",
+    "category": "모델",
+    "definition": "문장을 숫자 벡터로 바꿔 \"의미가 비슷한 문서\"를 찾게 해주는 모델입니다. 대화는 못 하지만 사내 문서 검색·RAG를 만들 때 반드시 필요합니다.",
+    "example": "bge-m3, multilingual-e5처럼 다국어를 지원하는 임베딩 모델은 한국어 문서 검색에도 쓸 수 있습니다."
+  },
+  {
+    "term": "라이선스 (상업 이용)",
+    "category": "로컬 실행",
+    "definition": "오픈소스 모델이라도 회사에서 써도 되는지는 라이선스마다 다릅니다. Apache-2.0·MIT는 자유롭게 쓸 수 있고, Llama·Gemma처럼 제공사 자체 라이선스는 조건이 붙으며, \"non-commercial\"이 붙으면 업무용으로 쓸 수 없습니다.",
+    "example": "FLUX.1-dev는 비상업 라이선스라 사내 서비스에 쓰려면 FLUX.1-schnell(Apache-2.0)을 검토해야 합니다."
+  },
+  {
+    "term": "게이트 모델 (Gated Model)",
+    "category": "로컬 실행",
+    "definition": "HuggingFace에서 약관 동의나 승인을 받아야 내려받을 수 있는 모델입니다. 승인은 보통 바로 나지만 HF 계정 로그인이 필요합니다.",
+    "example": "Meta의 Llama 모델은 대부분 게이트 모델이라 다운로드 전에 이용 약관에 동의해야 합니다."
   }
 ]

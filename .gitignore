@@ -27,3 +27,9 @@ dist-ssr
 # 개발 중 생기는 로그·임시 파일
 server_run.log
 server/data/aa-catalog-cache.json
+
+# HF 수집 결과·캐시 (서버가 매일 새로 만든다)
+server/data/hf-models.json
+server/data/hf-lineage.json
+server/data/hf-details.json
+server/data/hf-history/

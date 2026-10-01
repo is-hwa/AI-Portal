@@ -1,39 +1,61 @@
 import { useState } from 'react'
 import TabNav from './components/TabNav'
-import ModelComparison from './pages/ModelComparison'
-import OpenSourceModels from './pages/OpenSourceModels'
+import Trends from './pages/Trends'
+import Finder from './pages/Finder'
+import News from './pages/News'
 import TermsGlossary from './pages/TermsGlossary'
 import Admin from './pages/Admin'
+import { useHfModels } from './hooks/useHfModels'
+
+// 모델 데이터가 필요한 탭은 데이터가 올 때까지 같은 안내를 보여준다. 서버를 처음
+// 켜면 수집 결과가 아직 없어서(수집에 수 분) 빈 화면 대신 이유를 알려준다.
+function NeedsData({ data, error, children }) {
+  if (error) return <p className="mx-auto max-w-6xl px-6 py-16 text-sm text-rose-600">{error}</p>
+  if (!data) return <p className="mx-auto max-w-6xl px-6 py-16 text-sm text-slate-400">불러오는 중…</p>
+  if (data.families.length === 0) {
+    return (
+      <p className="mx-auto max-w-6xl px-6 py-16 text-sm text-slate-500">
+        아직 수집된 모델이 없습니다. 서버가 처음 켜지면 HuggingFace 수집을 자동으로 시작하며 10분 남짓
+        걸립니다. 진행 상황은 <b>관리</b> 탭에서 볼 수 있습니다.
+      </p>
+    )
+  }
+  return children
+}
 
 export default function App() {
-  const [tab, setTab] = useState('api')
+  const [tab, setTab] = useState('trends')
+  const { data, error, reload } = useHfModels()
 
   return (
     <div className="min-h-screen bg-slate-50">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
-          <h1 className="text-lg font-bold text-slate-900">AI 모델 비교</h1>
+          <h1 className="text-lg font-bold text-slate-900">로컬 AI 모델 포털</h1>
           <p className="text-xs text-slate-400">
-            AI 성능 지표를 자동으로 수집·비교하고, 용어를 찾아보는 포털
+            HuggingFace에서 지금 인기 있는 모델을, 무엇을 잘하고 내 PC에서 돌아가는지로 정리합니다
           </p>
         </div>
       </header>
       <TabNav active={tab} onChange={setTab} />
       <main>
-        {tab === 'api' && (
-          <ModelComparison
-            deployment="api"
-            title="API 모델 비교"
-            description="클라우드 API로 호출해서 쓰는 모델입니다. 토큰당 과금, 설치·GPU 없이 바로 최신 성능을 쓸 수 있다는 게 핵심입니다."
-          />
+        {tab === 'trends' && (
+          <NeedsData data={data} error={error}>
+            <Trends data={data} />
+          </NeedsData>
         )}
-        {tab === 'open_source' && <OpenSourceModels />}
+        {tab === 'finder' && (
+          <NeedsData data={data} error={error}>
+            <Finder data={data} />
+          </NeedsData>
+        )}
+        {tab === 'news' && <News />}
         {tab === 'terms' && <TermsGlossary />}
-        {tab === 'admin' && <Admin />}
+        {tab === 'admin' && <Admin data={data} onCollected={reload} />}
       </main>
       <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
-        벤치마크 수치는 각 제공사의 공식 발표 자료를 기준으로 하며, 실제 성능은 사용 환경에 따라
-        다를 수 있습니다.
+        데이터 출처: HuggingFace 공개 API. 필요 VRAM은 4bit 양자화 기준 추정치이며, 라이선스는 실제 도입
+        전 원문을 꼭 확인하세요.
       </footer>
     </div>
   )

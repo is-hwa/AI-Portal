@@ -24,7 +24,10 @@ const RULES = [
 ]
 
 // 이름에 대놓고 박혀 있는 경우는 제공사 자신의 선언이라 태그보다 확실하다.
-const CODE_NAME = /(code|coder|devstral|codestral)/i
+// 단어 경계로 자르는 게 중요하다 — 그냥 부분 문자열로 보면 임베딩 모델의 "encoder"가
+// "code"로 잡혀 코딩 특화로 분류된다. 앞은 영문자가 아니어야 하고, 뒤에 소문자가
+// 이어지면 안 된다(CodeLlama처럼 대문자로 이어지는 건 허용).
+const CODE_NAME = /(^|[^A-Za-z])([Cc]ode|[Cc]oder|[Dd]evstral|[Cc]odestral)(?![a-z])/
 
 const KOREAN_TAGS = /^(ko|korean|kor)$/i
 

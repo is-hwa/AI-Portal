@@ -1,8 +1,9 @@
 const TABS = [
-  { id: 'api', label: 'API 모델' },
-  { id: 'open_source', label: '로컬 오픈소스' },
+  { id: 'trends', label: '트렌드' },
+  { id: 'finder', label: '모델 찾기' },
+  { id: 'news', label: '뉴스' },
   { id: 'terms', label: '용어 정리' },
-  { id: 'admin', label: '업데이트 관리' },
+  { id: 'admin', label: '관리' },
 ]
 
 export default function TabNav({ active, onChange }) {
