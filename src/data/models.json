@@ -1,0 +1,4564 @@
+[
+  {
+    "name": "Claude Fable 5.1",
+    "provider": "Anthropic",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": 92.4,
+      "gpqa": 93.7,
+      "swebench": null,
+      "livecodebench": 90.5,
+      "math": null,
+      "aime": null,
+      "mmmu": 90.6,
+      "arena_elo": 1504,
+      "aa_intelligence_index": 53.4,
+      "aa_coding_index": 81.6,
+      "aa_agentic_index": 57.9
+    },
+    "speed": {
+      "ttft_ms": 298450,
+      "throughput_tps": 65.49,
+      "ttfa_ms": 298450,
+      "e2e_response_ms": 306080
+    },
+    "pricing": {
+      "input_per_1m": 10,
+      "output_per_1m": 50,
+      "cache_hit_per_1m": 0.25,
+      "cache_write_per_1m": 12.5,
+      "cost_per_task_usd": 7.6297,
+      "input_cost_per_task_usd": 3.7263,
+      "reasoning_cost_per_task_usd": 2.3599,
+      "answer_cost_per_task_usd": 1.5434,
+      "reasoning_tokens_per_task": 47240
+    },
+    "context_window": "1M",
+    "specialization": [
+      "에이전틱 작업",
+      "코딩",
+      "장문 컨텍스트"
+    ],
+    "description": "복잡한 코딩과 업무 자동화(에이전트) 작업에서 가장 안정적이고 신뢰도 높은 성능을 보여주는 앤트로픽의 최상위 공개 모델입니다.",
+    "deployment": "api",
+    "aa_slug": "claude-fable-5-1",
+    "params_b": null
+  },
+  {
+    "name": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": 89.1,
+      "gpqa": 94.6,
+      "swebench": 96.2,
+      "livecodebench": 82.6,
+      "math": null,
+      "aime": null,
+      "mmmu": 83,
+      "arena_elo": 1483,
+      "aa_intelligence_index": 47,
+      "aa_coding_index": 77.4,
+      "aa_agentic_index": 50.2
+    },
+    "speed": {
+      "ttft_ms": 124250,
+      "throughput_tps": 85.33,
+      "ttfa_ms": 124250,
+      "e2e_response_ms": 130110
+    },
+    "pricing": {
+      "input_per_1m": 4,
+      "output_per_1m": 20,
+      "cache_hit_per_1m": 0.4,
+      "cache_write_per_1m": 5,
+      "cost_per_task_usd": 1.9885,
+      "input_cost_per_task_usd": 1.4023,
+      "reasoning_cost_per_task_usd": 0.3456,
+      "answer_cost_per_task_usd": 0.2406,
+      "reasoning_tokens_per_task": 17280
+    },
+    "context_window": "1M",
+    "specialization": [
+      "코딩",
+      "에이전틱 작업",
+      "범용"
+    ],
+    "description": "범용 업무 능력과 코딩, 추론을 균형 있게 갖춘 오픈AI의 최신 플래그십 모델로, 100만 토큰 분량의 긴 문서도 한 번에 처리합니다.",
+    "deployment": "api",
+    "aa_slug": "gpt-5-6-sol",
+    "params_b": null
+  },
+  {
+    "name": "Gemini 3.1 Pro",
+    "provider": "Google",
+    "release_date": "2026-02",
+    "benchmarks": {
+      "mmlu_pro": 91,
+      "gpqa": 94.3,
+      "swebench": 80.6,
+      "livecodebench": 88.5,
+      "math": 95.1,
+      "aime": 95,
+      "mmmu": 81,
+      "arena_elo": 1487,
+      "aa_intelligence_index": 29.7,
+      "aa_coding_index": 68.8,
+      "aa_agentic_index": 8.2
+    },
+    "speed": {
+      "ttft_ms": 32960,
+      "throughput_tps": 116.45,
+      "ttfa_ms": 32960,
+      "e2e_response_ms": 37250
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 12,
+      "cache_hit_per_1m": 0.2,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.6747,
+      "input_cost_per_task_usd": 0.4574,
+      "reasoning_cost_per_task_usd": 0.1499,
+      "answer_cost_per_task_usd": 0.0675,
+      "reasoning_tokens_per_task": 12490
+    },
+    "context_window": "1M",
+    "specialization": [
+      "멀티모달",
+      "장문 컨텍스트",
+      "범용"
+    ],
+    "description": "과학적 추론과 대용량 문서·영상 처리에 강점을 지닌 구글의 최신 모델로, 뛰어난 성능 대비 합리적인 가격이 특징입니다.",
+    "deployment": "api",
+    "aa_slug": "gemini-3-1-pro-preview",
+    "params_b": null
+  },
+  {
+    "name": "Llama 4 Maverick",
+    "provider": "Meta",
+    "release_date": "2025-04",
+    "benchmarks": {
+      "mmlu_pro": 80.5,
+      "gpqa": 69.8,
+      "swebench": null,
+      "livecodebench": 43.4,
+      "math": null,
+      "aime": null,
+      "mmmu": 73.4,
+      "arena_elo": null,
+      "aa_intelligence_index": 10,
+      "aa_coding_index": 16.3,
+      "aa_agentic_index": 0.6
+    },
+    "speed": {
+      "ttft_ms": 910,
+      "throughput_tps": 112.21,
+      "ttfa_ms": 910,
+      "e2e_response_ms": 5370
+    },
+    "pricing": {
+      "input_per_1m": 0.26,
+      "output_per_1m": 0.91,
+      "cache_hit_per_1m": 0.24,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": "1M",
+    "specialization": [
+      "멀티모달",
+      "다국어"
+    ],
+    "description": "메타가 무료로 공개한 오픈소스 모델로, 자체 서버에 설치해 데이터를 외부로 보내지 않고 활용할 수 있어 비용 절감에 유리합니다.",
+    "deployment": "open_source",
+    "aa_slug": "llama-4-maverick",
+    "params_b": 401.58,
+    "weights_verified": true,
+    "hf_id": "meta-llama/Llama-4-Maverick-17B-128E",
+    "hf_url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E",
+    "license": "llama4",
+    "hf_tags": [
+      "llama4",
+      "image-text-to-text",
+      "facebook",
+      "meta",
+      "llama",
+      "conversational",
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "it",
+      "pt",
+      "th",
+      "tl",
+      "vi"
+    ]
+  },
+  {
+    "name": "Grok 4.6",
+    "provider": "xAI",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": 89.4,
+      "gpqa": 94.9,
+      "swebench": null,
+      "livecodebench": 88.2,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": 1461,
+      "aa_intelligence_index": 44.3,
+      "aa_coding_index": 76.8,
+      "aa_agentic_index": 53
+    },
+    "speed": {
+      "ttft_ms": 42750,
+      "throughput_tps": 58.62,
+      "ttfa_ms": 42750,
+      "e2e_response_ms": 51280
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 6,
+      "cache_hit_per_1m": 0.5,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 1.8589,
+      "input_cost_per_task_usd": 1.6439,
+      "reasoning_cost_per_task_usd": 0.1127,
+      "answer_cost_per_task_usd": 0.1023,
+      "reasoning_tokens_per_task": 18782
+    },
+    "context_window": "500K",
+    "specialization": [
+      "코딩",
+      "에이전틱 작업",
+      "실시간 정보 연동"
+    ],
+    "description": "X(트위터)의 실시간 정보 연동이 강점인 xAI의 최신 모델로, 장시간 자동 작업(에이전트)과 코딩에 특화되어 있습니다.",
+    "deployment": "api",
+    "aa_slug": "grok-4-6",
+    "params_b": null
+  },
+  {
+    "name": "DeepSeek V4-Pro",
+    "provider": "DeepSeek",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": 87.5,
+      "gpqa": 90.1,
+      "swebench": 80.6,
+      "livecodebench": 93.5,
+      "math": null,
+      "aime": 95,
+      "mmmu": null,
+      "arena_elo": 1460,
+      "aa_intelligence_index": 36,
+      "aa_coding_index": 68.8,
+      "aa_agentic_index": 41.3
+    },
+    "speed": {
+      "ttft_ms": 1700,
+      "throughput_tps": 67.83,
+      "ttfa_ms": 31180,
+      "e2e_response_ms": 38550
+    },
+    "pricing": {
+      "input_per_1m": 1.32,
+      "output_per_1m": 3.96,
+      "cache_hit_per_1m": 0.04,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.674,
+      "input_cost_per_task_usd": 0.4556,
+      "reasoning_cost_per_task_usd": 0.1511,
+      "answer_cost_per_task_usd": 0.0673,
+      "reasoning_tokens_per_task": 38164
+    },
+    "context_window": "1M",
+    "specialization": [
+      "범용"
+    ],
+    "description": "중국 딥시크가 공개한 오픈소스 모델로, 최상위권 코딩 성능을 경쟁사 대비 훨씬 저렴한 가격에 제공합니다.",
+    "deployment": "open_source",
+    "aa_slug": "deepseek-v4-pro",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "deepseek-ai/DeepSeek-V4-Pro",
+    "hf_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+    "license": "mit",
+    "hf_tags": [
+      "deepseek_v4",
+      "text-generation",
+      "8-bit",
+      "fp8"
+    ]
+  },
+  {
+    "name": "GPT-6 Astra",
+    "provider": "OpenAI",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 52.4,
+      "aa_coding_index": 75.9,
+      "aa_agentic_index": 50.2
+    },
+    "speed": {
+      "ttft_ms": 198110,
+      "throughput_tps": 53.67,
+      "ttfa_ms": 198110,
+      "e2e_response_ms": 207430
+    },
+    "pricing": {
+      "input_per_1m": 10,
+      "output_per_1m": 50,
+      "cache_hit_per_1m": 1,
+      "cache_write_per_1m": 12.5,
+      "cost_per_task_usd": 2.3088,
+      "input_cost_per_task_usd": 1.4637,
+      "reasoning_cost_per_task_usd": 0.4291,
+      "answer_cost_per_task_usd": 0.4159,
+      "reasoning_tokens_per_task": 8582
+    },
+    "context_window": "1M",
+    "specialization": [
+      "코딩",
+      "에이전틱 작업",
+      "범용"
+    ],
+    "description": "OpenAI가 GPT-5.6 Sol 다음으로 내놓은 차기 플래그십으로, 코딩·과학·보안 분야에서 큰 도약을 내세우는 모델입니다.",
+    "deployment": "api",
+    "aa_slug": "gpt-6-astra-xhigh",
+    "params_b": null
+  },
+  {
+    "name": "MiMo-V2.6-Pro",
+    "provider": "Xiaomi",
+    "deployment": "open_source",
+    "aa_slug": "mimo-v2-6-pro",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 46.3,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2620,
+      "ttfa_ms": 39260,
+      "e2e_response_ms": 48420,
+      "throughput_tps": 54.59
+    },
+    "pricing": {
+      "input_per_1m": 0.43,
+      "output_per_1m": 0.87,
+      "cache_hit_per_1m": 0,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.1332,
+      "input_cost_per_task_usd": 0.0773,
+      "reasoning_cost_per_task_usd": 0.0326,
+      "answer_cost_per_task_usd": 0.0233,
+      "reasoning_tokens_per_task": 37520
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "에이전틱 작업",
+      "장문 컨텍스트"
+    ],
+    "description": "샤오미가 공개한 오픈소스 모델로, HuggingFace에서 최근 주목받으며 Artificial Analysis 순위권에도 오른 신흥 모델입니다.",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "hf_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "license": "mit",
+    "hf_tags": [
+      "mimo_v2",
+      "text-generation",
+      "multimodal",
+      "vision-language",
+      "audio",
+      "agent",
+      "video-understanding",
+      "long-context",
+      "conversational",
+      "en",
+      "zh",
+      "8-bit",
+      "fp8"
+    ]
+  },
+  {
+    "name": "GLM-5.3 (max)",
+    "provider": "Z AI",
+    "deployment": "open_source",
+    "aa_slug": "glm-5-3",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 44.8,
+      "aa_coding_index": 74.8,
+      "aa_agentic_index": 53.1
+    },
+    "speed": {
+      "ttft_ms": 3280,
+      "ttfa_ms": 38340,
+      "e2e_response_ms": 47100,
+      "throughput_tps": 57.06
+    },
+    "pricing": {
+      "input_per_1m": 1.4,
+      "output_per_1m": 4.4,
+      "cache_hit_per_1m": 0.26,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 2.0056,
+      "input_cost_per_task_usd": 1.6927,
+      "reasoning_cost_per_task_usd": 0.2144,
+      "answer_cost_per_task_usd": 0.0986,
+      "reasoning_tokens_per_task": 48730
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "zai-org/GLM-5.3",
+    "hf_url": "https://huggingface.co/zai-org/GLM-5.3",
+    "license": "glm-5.3",
+    "hf_tags": [
+      "glm_moe_dsa",
+      "text-generation",
+      "conversational",
+      "en",
+      "zh",
+      "fp8",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "Kimi K3 (max)",
+    "provider": "Kimi",
+    "deployment": "open_source",
+    "aa_slug": "kimi-k3",
+    "release_date": "2026-07",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 43.6,
+      "aa_coding_index": 76.2,
+      "aa_agentic_index": 50
+    },
+    "speed": {
+      "ttft_ms": 4150,
+      "ttfa_ms": 58210,
+      "e2e_response_ms": 71730,
+      "throughput_tps": 37
+    },
+    "pricing": {
+      "input_per_1m": 3,
+      "output_per_1m": 15,
+      "cache_hit_per_1m": 0.3,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 2.0001,
+      "input_cost_per_task_usd": 1.2733,
+      "reasoning_cost_per_task_usd": 0.4868,
+      "answer_cost_per_task_usd": 0.24,
+      "reasoning_tokens_per_task": 32453
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "moonshotai/Kimi-K3",
+    "hf_url": "https://huggingface.co/moonshotai/Kimi-K3",
+    "license": "kimi-k3",
+    "hf_tags": [
+      "kimi_k3",
+      "feature-extraction",
+      "conversational",
+      "image-text-to-text",
+      "8-bit",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "GLM 5.3 Flash",
+    "provider": "Z AI",
+    "deployment": "open_source",
+    "aa_slug": "glm-5-3-flash",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 41.8,
+      "aa_coding_index": 71.5,
+      "aa_agentic_index": 50.9
+    },
+    "speed": {
+      "ttft_ms": 3110,
+      "ttfa_ms": 35660,
+      "e2e_response_ms": 43800,
+      "throughput_tps": 61.45
+    },
+    "pricing": {
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.5,
+      "cache_hit_per_1m": 0.03,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.2533,
+      "input_cost_per_task_usd": 0.2189,
+      "reasoning_cost_per_task_usd": 0.0233,
+      "answer_cost_per_task_usd": 0.011,
+      "reasoning_tokens_per_task": 46649
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "zai-org/GLM-5.3-Flash",
+    "hf_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "license": "mit",
+    "hf_tags": [
+      "glm5_next",
+      "image-text-to-text",
+      "conversational",
+      "en",
+      "zh",
+      "fp8"
+    ]
+  },
+  {
+    "name": "Qwen3.8 2.4T A95B",
+    "provider": "Alibaba",
+    "deployment": "open_source",
+    "aa_slug": "qwen3-8-2-4t-a95b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 39.9,
+      "aa_coding_index": 71.9,
+      "aa_agentic_index": 50.1
+    },
+    "speed": {
+      "ttft_ms": 3010,
+      "ttfa_ms": 55410,
+      "e2e_response_ms": 68510,
+      "throughput_tps": 38.17
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 6,
+      "cache_hit_per_1m": 0.25,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 2.1559,
+      "input_cost_per_task_usd": 1.7443,
+      "reasoning_cost_per_task_usd": 0.2803,
+      "answer_cost_per_task_usd": 0.1313,
+      "reasoning_tokens_per_task": 46718
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 2400,
+    "weights_verified": true,
+    "hf_id": "Qwen/Qwen3.8-2.4T-A95B",
+    "hf_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "license": "qwen3.8-max",
+    "hf_tags": [
+      "qwen3_5_moe_text",
+      "text-generation",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Qwen3.8-Flash-Next",
+    "provider": "Alibaba",
+    "deployment": "open_source",
+    "aa_slug": "qwen3-8-flash-next",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 39.8,
+      "aa_coding_index": 73.1,
+      "aa_agentic_index": 53.6
+    },
+    "speed": {
+      "ttft_ms": 2720,
+      "ttfa_ms": 40320,
+      "e2e_response_ms": 49720,
+      "throughput_tps": 53.2
+    },
+    "pricing": {
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.47,
+      "cache_hit_per_1m": 0.02,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.3722,
+      "input_cost_per_task_usd": 0.3215,
+      "reasoning_cost_per_task_usd": 0.0337,
+      "answer_cost_per_task_usd": 0.017,
+      "reasoning_tokens_per_task": 71807
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "Qwen/Qwen3.8-Flash-Next",
+    "hf_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+    "license": "qwen-community-1.0",
+    "hf_tags": [
+      "qwen4_exp",
+      "image-text-to-text",
+      "conversational"
+    ]
+  },
+  {
+    "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+    "provider": "DeepSeek",
+    "deployment": "open_source",
+    "aa_slug": "deepseek-v4-1-flash",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 39.5,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 1080,
+      "ttfa_ms": 9900,
+      "e2e_response_ms": 12110,
+      "throughput_tps": 226.56
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.2652,
+      "input_cost_per_task_usd": 0.1589,
+      "reasoning_cost_per_task_usd": 0.0752,
+      "answer_cost_per_task_usd": 0.0311,
+      "reasoning_tokens_per_task": 62670
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "hf_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+    "license": "mit",
+    "hf_tags": [
+      "deepseek_v41",
+      "text-generation",
+      "image-text-to-text",
+      "8-bit",
+      "fp8"
+    ]
+  },
+  {
+    "name": "DeepSeek V4 Flash Vision (Reasoning, Max Effort)",
+    "provider": "DeepSeek",
+    "deployment": "open_source",
+    "aa_slug": "deepseek-v4-flash-vision",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 34.8,
+      "aa_coding_index": 65,
+      "aa_agentic_index": 47.5
+    },
+    "speed": {
+      "ttft_ms": 1110,
+      "ttfa_ms": 9840,
+      "e2e_response_ms": 12020,
+      "throughput_tps": 229.11
+    },
+    "pricing": {
+      "input_per_1m": 0.44,
+      "output_per_1m": 1.32,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.3144,
+      "input_cost_per_task_usd": 0.2231,
+      "reasoning_cost_per_task_usd": 0.0606,
+      "answer_cost_per_task_usd": 0.0307,
+      "reasoning_tokens_per_task": 45904
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "hf_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "license": "mit",
+    "hf_tags": [
+      "deepseek_v4",
+      "text-generation",
+      "image-text-to-text",
+      "8-bit",
+      "fp8"
+    ]
+  },
+  {
+    "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+    "provider": "DeepSeek",
+    "deployment": "open_source",
+    "aa_slug": "deepseek-v4-flash",
+    "release_date": "2026-07",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 34.3,
+      "aa_coding_index": 69.1,
+      "aa_agentic_index": 41
+    },
+    "speed": {
+      "ttft_ms": 1200,
+      "ttfa_ms": 10210,
+      "e2e_response_ms": 12470,
+      "throughput_tps": 221.9
+    },
+    "pricing": {
+      "input_per_1m": 0.44,
+      "output_per_1m": 1.32,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.2196,
+      "input_cost_per_task_usd": 0.1377,
+      "reasoning_cost_per_task_usd": 0.06,
+      "answer_cost_per_task_usd": 0.0219,
+      "reasoning_tokens_per_task": 45479
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "deepseek-ai/DeepSeek-V4-Flash",
+    "hf_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+    "license": "mit",
+    "hf_tags": [
+      "deepseek_v4",
+      "text-generation",
+      "8-bit",
+      "fp8",
+      "deploy:azure",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "GLM-5.2 (max)",
+    "provider": "Z AI",
+    "deployment": "open_source",
+    "aa_slug": "glm-5-2",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 33.7,
+      "aa_coding_index": 68.8,
+      "aa_agentic_index": 38.4
+    },
+    "speed": {
+      "ttft_ms": 4620,
+      "ttfa_ms": 33950,
+      "e2e_response_ms": 41290,
+      "throughput_tps": 68.18
+    },
+    "pricing": {
+      "input_per_1m": 1.4,
+      "output_per_1m": 4.4,
+      "cache_hit_per_1m": 0.26,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.9649,
+      "input_cost_per_task_usd": 0.6819,
+      "reasoning_cost_per_task_usd": 0.2232,
+      "answer_cost_per_task_usd": 0.0598,
+      "reasoning_tokens_per_task": 50735
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "zai-org/GLM-5.2",
+    "hf_url": "https://huggingface.co/zai-org/GLM-5.2",
+    "license": "mit",
+    "hf_tags": [
+      "glm_moe_dsa",
+      "text-generation",
+      "conversational",
+      "en",
+      "zh"
+    ]
+  },
+  {
+    "name": "MiniMax-M3",
+    "provider": "MiniMax",
+    "deployment": "open_source",
+    "aa_slug": "minimax-m3",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 29.2,
+      "aa_coding_index": 58.6,
+      "aa_agentic_index": 29.5
+    },
+    "speed": {
+      "ttft_ms": 1250,
+      "ttfa_ms": 20060,
+      "e2e_response_ms": 24760,
+      "throughput_tps": 106.36
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "cache_hit_per_1m": 0.06,
+      "cache_write_per_1m": 0.38,
+      "cost_per_task_usd": 0.5076,
+      "input_cost_per_task_usd": 0.4498,
+      "reasoning_cost_per_task_usd": 0.0262,
+      "answer_cost_per_task_usd": 0.0316,
+      "reasoning_tokens_per_task": 21818
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "에이전틱 작업",
+      "코딩"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "MiniMaxAI/MiniMax-M3",
+    "hf_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+    "license": "minimax-community",
+    "hf_tags": [
+      "minimax_m3_vl",
+      "image-text-to-text",
+      "multimodal",
+      "moe",
+      "agent",
+      "coding",
+      "video",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Kimi K2.6",
+    "provider": "Kimi",
+    "deployment": "open_source",
+    "aa_slug": "kimi-k2-6",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 27,
+      "aa_coding_index": 61.8,
+      "aa_agentic_index": 20.5
+    },
+    "speed": {
+      "ttft_ms": 2980,
+      "ttfa_ms": 125490,
+      "e2e_response_ms": 139250,
+      "throughput_tps": 36.33
+    },
+    "pricing": {
+      "input_per_1m": 0.95,
+      "output_per_1m": 4,
+      "cache_hit_per_1m": 0.16,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.7998,
+      "input_cost_per_task_usd": 0.6104,
+      "reasoning_cost_per_task_usd": 0.1474,
+      "answer_cost_per_task_usd": 0.042,
+      "reasoning_tokens_per_task": 36845
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "moonshotai/Kimi-K2.6",
+    "hf_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "license": "modified-mit",
+    "hf_tags": [
+      "kimi_k25",
+      "feature-extraction",
+      "image-text-to-text",
+      "conversational"
+    ]
+  },
+  {
+    "name": "MiMo-V2.5-Pro",
+    "provider": "Xiaomi",
+    "deployment": "open_source",
+    "aa_slug": "mimo-v2-5-pro",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 26,
+      "aa_coding_index": 60.2,
+      "aa_agentic_index": 21.3
+    },
+    "speed": {
+      "ttft_ms": 5810,
+      "ttfa_ms": 50440,
+      "e2e_response_ms": 61590,
+      "throughput_tps": 44.81
+    },
+    "pricing": {
+      "input_per_1m": 0.43,
+      "output_per_1m": 0.87,
+      "cache_hit_per_1m": 0,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.0541,
+      "input_cost_per_task_usd": 0.0281,
+      "reasoning_cost_per_task_usd": 0.0156,
+      "answer_cost_per_task_usd": 0.0104,
+      "reasoning_tokens_per_task": 17907
+    },
+    "context_window": null,
+    "specialization": [
+      "에이전틱 작업",
+      "장문 컨텍스트",
+      "코딩"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "XiaomiMiMo/MiMo-V2.5-Pro",
+    "hf_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+    "license": "mit",
+    "hf_tags": [
+      "mimo_v2",
+      "text-generation",
+      "agent",
+      "long-context",
+      "code",
+      "conversational",
+      "en",
+      "zh",
+      "fp8"
+    ]
+  },
+  {
+    "name": "Kimi K2.7 Code",
+    "provider": "Kimi",
+    "deployment": "open_source",
+    "aa_slug": "kimi-k2-7-code",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 25.8,
+      "aa_coding_index": 60.8,
+      "aa_agentic_index": 21
+    },
+    "speed": {
+      "ttft_ms": 3310,
+      "ttfa_ms": 40380,
+      "e2e_response_ms": 48700,
+      "throughput_tps": 60.12
+    },
+    "pricing": {
+      "input_per_1m": 0.95,
+      "output_per_1m": 4,
+      "cache_hit_per_1m": 0.19,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.5412,
+      "input_cost_per_task_usd": 0.4216,
+      "reasoning_cost_per_task_usd": 0.0767,
+      "answer_cost_per_task_usd": 0.0428,
+      "reasoning_tokens_per_task": 19181
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "코딩"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "moonshotai/Kimi-K2.7-Code",
+    "hf_url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+    "license": "modified-mit",
+    "hf_tags": [
+      "kimi_k25",
+      "feature-extraction",
+      "image-text-to-text",
+      "conversational"
+    ]
+  },
+  {
+    "name": "MiMo-V2.5",
+    "provider": "Xiaomi",
+    "deployment": "open_source",
+    "aa_slug": "mimo-v2-5-0424",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 25.2,
+      "aa_coding_index": 56.8,
+      "aa_agentic_index": 15.8
+    },
+    "speed": {
+      "ttft_ms": 3410,
+      "ttfa_ms": 60280,
+      "e2e_response_ms": 74500,
+      "throughput_tps": 35.17
+    },
+    "pricing": {
+      "input_per_1m": 0.14,
+      "output_per_1m": 0.28,
+      "cache_hit_per_1m": 0,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "에이전틱 작업",
+      "장문 컨텍스트",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 7.62,
+    "weights_verified": true,
+    "hf_id": "XiaomiMiMo/MiMo-V2.5",
+    "hf_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+    "license": "mit",
+    "hf_tags": [
+      "mimo_v2",
+      "text-generation",
+      "multimodal",
+      "vision-language",
+      "audio",
+      "agent",
+      "video-understanding",
+      "long-context",
+      "conversational",
+      "en",
+      "zh",
+      "fp8"
+    ]
+  },
+  {
+    "name": "Ling 3.0 Flash",
+    "provider": "InclusionAI",
+    "deployment": "open_source",
+    "aa_slug": "ling-3-0-flash",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 24.9,
+      "aa_coding_index": 50.6,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2520,
+      "ttfa_ms": 8610,
+      "e2e_response_ms": 10130,
+      "throughput_tps": 328.55
+    },
+    "pricing": {
+      "input_per_1m": 0.07,
+      "output_per_1m": 0.22,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 1.36,
+    "weights_verified": true,
+    "hf_id": "inclusionAI/Ling-3.0-flash",
+    "hf_url": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+    "license": "mit",
+    "hf_tags": [
+      "bailing_hybrid",
+      "text-generation",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Solar Open2 250B",
+    "provider": "Upstage",
+    "deployment": "open_source",
+    "aa_slug": "solar-open2-250b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 24.7,
+      "aa_coding_index": 45,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 250,
+    "weights_verified": true,
+    "hf_id": "upstage/Solar-Open2-250B",
+    "hf_url": "https://huggingface.co/upstage/Solar-Open2-250B",
+    "license": "upstage-solar-license",
+    "hf_tags": [
+      "solar_open2",
+      "text-generation",
+      "upstage",
+      "solar",
+      "moe",
+      "llm",
+      "vllm",
+      "conversational",
+      "en",
+      "ko",
+      "ja"
+    ]
+  },
+  {
+    "name": "Ling-3.0-flash-VL",
+    "provider": "InclusionAI",
+    "deployment": "open_source",
+    "aa_slug": "ling-3-0-flash-vl",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 24.6,
+      "aa_coding_index": 57,
+      "aa_agentic_index": 28.7
+    },
+    "speed": {
+      "ttft_ms": 2680,
+      "ttfa_ms": 16590,
+      "e2e_response_ms": 20070,
+      "throughput_tps": 143.77
+    },
+    "pricing": {
+      "input_per_1m": 0.07,
+      "output_per_1m": 0.22,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "inclusionAI/Ling-3.0-flash-VL",
+    "hf_url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL",
+    "license": "mit",
+    "hf_tags": [
+      "bailing_moe_v3_vl",
+      "image-text-to-text",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+    "provider": "NVIDIA",
+    "deployment": "open_source",
+    "aa_slug": "nvidia-nemotron-3-ultra-550b-a55b",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 22.9,
+      "aa_coding_index": 49.3,
+      "aa_agentic_index": 20.1
+    },
+    "speed": {
+      "ttft_ms": 2350,
+      "ttfa_ms": 16480,
+      "e2e_response_ms": 19590,
+      "throughput_tps": 160.95
+    },
+    "pricing": {
+      "input_per_1m": 0.6,
+      "output_per_1m": 2.5,
+      "cache_hit_per_1m": 0.16,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.5495,
+      "input_cost_per_task_usd": 0.4785,
+      "reasoning_cost_per_task_usd": 0.0376,
+      "answer_cost_per_task_usd": 0.0333,
+      "reasoning_tokens_per_task": 15050
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 550,
+    "weights_verified": true,
+    "hf_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "hf_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "license": "openmdw-1.1",
+    "hf_tags": [
+      "nemotron_h",
+      "text-generation",
+      "nvidia",
+      "nemotron-3",
+      "latent-moe",
+      "mtp",
+      "conversational",
+      "en",
+      "fr",
+      "es",
+      "it",
+      "de",
+      "pt",
+      "ja",
+      "ko",
+      "hi",
+      "ar",
+      "zh",
+      "he",
+      "dataset:nvidia/nemotron-post-training-v3",
+      "dataset:nvidia/nemotron-pre-training-datasets"
+    ]
+  },
+  {
+    "name": "MiniMax-M2.5",
+    "provider": "MiniMax",
+    "deployment": "open_source",
+    "aa_slug": "minimax-m2-5",
+    "release_date": "2026-02",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 22.8,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 1610,
+      "ttfa_ms": 24450,
+      "e2e_response_ms": 30160,
+      "throughput_tps": 87.55
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "cache_hit_per_1m": 0.03,
+      "cache_write_per_1m": 0.38,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "MiniMaxAI/MiniMax-M2.5",
+    "hf_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "license": "modified-mit",
+    "hf_tags": [
+      "minimax_m2",
+      "text-generation",
+      "conversational",
+      "fp8",
+      "deploy:sagemaker",
+      "deploy:azure"
+    ]
+  },
+  {
+    "name": "MiniMax-M2.7",
+    "provider": "MiniMax",
+    "deployment": "open_source",
+    "aa_slug": "minimax-m2-7",
+    "release_date": "2026-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 22.8,
+      "aa_coding_index": 52.6,
+      "aa_agentic_index": 15.3
+    },
+    "speed": {
+      "ttft_ms": 1560,
+      "ttfa_ms": 38270,
+      "e2e_response_ms": 45720,
+      "throughput_tps": 67.07
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "cache_hit_per_1m": 0.06,
+      "cache_write_per_1m": 0.38,
+      "cost_per_task_usd": 0.1017,
+      "input_cost_per_task_usd": 0.0764,
+      "reasoning_cost_per_task_usd": 0.0117,
+      "answer_cost_per_task_usd": 0.0135,
+      "reasoning_tokens_per_task": 9772
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "MiniMaxAI/MiniMax-M2.7",
+    "hf_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "license": "other",
+    "hf_tags": [
+      "minimax_m2",
+      "text-generation",
+      "conversational",
+      "fp8",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "Ling-3.0-flash-Fin",
+    "provider": "InclusionAI",
+    "deployment": "open_source",
+    "aa_slug": "ling-3-0-flash-fin",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 22.6,
+      "aa_coding_index": 55.6,
+      "aa_agentic_index": 27.9
+    },
+    "speed": {
+      "ttft_ms": 2500,
+      "ttfa_ms": 15110,
+      "e2e_response_ms": 18270,
+      "throughput_tps": 158.52
+    },
+    "pricing": {
+      "input_per_1m": 0.07,
+      "output_per_1m": 0.22,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "금융",
+      "에이전틱 작업",
+      "장문 컨텍스트",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "inclusionAI/Ling-3.0-flash-Fin",
+    "hf_url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin",
+    "license": "mit",
+    "hf_tags": [
+      "bailing_hybrid",
+      "finance",
+      "financial-research",
+      "agents",
+      "tool-use",
+      "long-context",
+      "mixture-of-experts",
+      "text-generation",
+      "conversational"
+    ]
+  },
+  {
+    "name": "K-EXAONE 2.0 0803",
+    "provider": "LG AI Research",
+    "deployment": "open_source",
+    "aa_slug": "k-exaone-2-0-0803",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 19.7,
+      "aa_coding_index": 40.6,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
+    "hf_url": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "exaone_moe",
+      "text-generation",
+      "lg-ai",
+      "exaone",
+      "k-exaone",
+      "moe",
+      "conversational",
+      "en",
+      "ko",
+      "es",
+      "de",
+      "ja",
+      "vi",
+      "fr",
+      "it",
+      "pl",
+      "pt"
+    ]
+  },
+  {
+    "name": "Gemma 4 31B (Reasoning)",
+    "provider": "Google",
+    "deployment": "open_source",
+    "aa_slug": "gemma-4-31b",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 19,
+      "aa_coding_index": 43.4,
+      "aa_agentic_index": 4.2
+    },
+    "speed": {
+      "ttft_ms": 1030,
+      "ttfa_ms": 50060,
+      "e2e_response_ms": 64180,
+      "throughput_tps": 35.41
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 31,
+    "weights_verified": true,
+    "hf_id": "google/gemma-4-31B",
+    "hf_url": "https://huggingface.co/google/gemma-4-31B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "gemma4",
+      "image-text-to-text"
+    ]
+  },
+  {
+    "name": "Gemma 4 26B A4B (Reasoning)",
+    "provider": "Google",
+    "deployment": "open_source",
+    "aa_slug": "gemma-4-26b-a4b",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 16.7,
+      "aa_coding_index": 39.3,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0.12,
+      "output_per_1m": 0.37,
+      "cache_hit_per_1m": 0.09,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달"
+    ],
+    "description": "",
+    "params_b": 26,
+    "weights_verified": true,
+    "hf_id": "google/gemma-4-26B-A4B",
+    "hf_url": "https://huggingface.co/google/gemma-4-26B-A4B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "gemma4",
+      "image-text-to-text"
+    ]
+  },
+  {
+    "name": "Granite 4.2 30B",
+    "provider": "IBM",
+    "deployment": "open_source",
+    "aa_slug": "granite-4-2-30b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 14.8,
+      "aa_coding_index": 29.9,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 940,
+      "ttfa_ms": 28840,
+      "e2e_response_ms": 35810,
+      "throughput_tps": 71.7
+    },
+    "pricing": {
+      "input_per_1m": 0.16,
+      "output_per_1m": 0.65,
+      "cache_hit_per_1m": 0.04,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "추론",
+      "에이전틱 작업",
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 30,
+    "weights_verified": true,
+    "hf_id": "ibm-granite/granite-4.2-30b",
+    "hf_url": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "granite",
+      "text-generation",
+      "granite-4.2",
+      "reasoning",
+      "thinking",
+      "tool-calling",
+      "ibm",
+      "conversational",
+      "en",
+      "de",
+      "es",
+      "fr",
+      "ja",
+      "pt",
+      "ar",
+      "cs",
+      "it",
+      "ko",
+      "nl",
+      "zh"
+    ]
+  },
+  {
+    "name": "K-EXAONE (Reasoning)",
+    "provider": "LG AI Research",
+    "deployment": "open_source",
+    "aa_slug": "k-exaone",
+    "release_date": "2025-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 14.4,
+      "aa_coding_index": 32.1,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "LGAI-EXAONE/K-EXAONE-236B-A23B",
+    "hf_url": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-236B-A23B",
+    "license": "k-exaone",
+    "hf_tags": [
+      "exaone_moe",
+      "text-generation",
+      "lg-ai",
+      "exaone",
+      "k-exaone",
+      "conversational",
+      "en",
+      "ko",
+      "es",
+      "de",
+      "ja",
+      "vi"
+    ]
+  },
+  {
+    "name": "Gemma 4 12B (Reasoning)",
+    "provider": "Google",
+    "deployment": "open_source",
+    "aa_slug": "gemma-4-12b",
+    "release_date": "2026-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 14.2,
+      "aa_coding_index": 31,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2350,
+      "ttfa_ms": 20200,
+      "e2e_response_ms": 24660,
+      "throughput_tps": 112.05
+    },
+    "pricing": {
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.3,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 12,
+    "weights_verified": true,
+    "hf_id": "google/gemma-4-12B",
+    "hf_url": "https://huggingface.co/google/gemma-4-12B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "gemma4_unified",
+      "image-text-to-text",
+      "any-to-any"
+    ]
+  },
+  {
+    "name": "EXAONE 4.5 33B",
+    "provider": "LG AI Research",
+    "deployment": "open_source",
+    "aa_slug": "exaone-4-5-33b",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 13.2,
+      "aa_coding_index": 23.6,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 33,
+    "weights_verified": true,
+    "hf_id": "LGAI-EXAONE/EXAONE-4.5-33B",
+    "hf_url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B",
+    "license": "exaone",
+    "hf_tags": [
+      "exaone4_5",
+      "image-text-to-text",
+      "lg-ai",
+      "exaone",
+      "conversational",
+      "en",
+      "ko",
+      "es",
+      "de",
+      "ja",
+      "vi"
+    ]
+  },
+  {
+    "name": "Nemotron 3.5 Lightning",
+    "provider": "NVIDIA",
+    "deployment": "open_source",
+    "aa_slug": "nemotron-3-5-lightning",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 12.9,
+      "aa_coding_index": 26.8,
+      "aa_agentic_index": 3.5
+    },
+    "speed": {
+      "ttft_ms": 610,
+      "ttfa_ms": 7840,
+      "e2e_response_ms": 9650,
+      "throughput_tps": 276.51
+    },
+    "pricing": {
+      "input_per_1m": 0.07,
+      "output_per_1m": 0.22,
+      "cache_hit_per_1m": 0.05,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.0983,
+      "input_cost_per_task_usd": 0.0902,
+      "reasoning_cost_per_task_usd": 0.0037,
+      "answer_cost_per_task_usd": 0.0044,
+      "reasoning_tokens_per_task": 16980
+    },
+    "context_window": null,
+    "specialization": [
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+    "hf_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+    "license": "openmdw-1.1",
+    "hf_tags": [
+      "nemotron_h",
+      "text-generation",
+      "nvidia",
+      "nemotron-3.5",
+      "conversational",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "it",
+      "ja",
+      "dataset:nvidia/nemotron-post-training-v3",
+      "dataset:nvidia/nemotron-pre-training-datasets",
+      "deploy:azure",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "Nemotron 3 Super 120B A12B (Reasoning)",
+    "provider": "NVIDIA",
+    "deployment": "open_source",
+    "aa_slug": "nvidia-nemotron-3-super-120b-a12b",
+    "release_date": "2026-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 12.8,
+      "aa_coding_index": 37.7,
+      "aa_agentic_index": 1.7
+    },
+    "speed": {
+      "ttft_ms": 1490,
+      "ttfa_ms": 13770,
+      "e2e_response_ms": 16840,
+      "throughput_tps": 162.86
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 0.9,
+      "cache_hit_per_1m": 0.15,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 1.6391,
+      "input_cost_per_task_usd": 1.5366,
+      "reasoning_cost_per_task_usd": 0.0604,
+      "answer_cost_per_task_usd": 0.0421,
+      "reasoning_tokens_per_task": 67059
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 120,
+    "weights_verified": true,
+    "hf_id": "nvidia/Nemotron-3-Super-120B-A12B-BF16-MTPv2",
+    "hf_url": "https://huggingface.co/nvidia/Nemotron-3-Super-120B-A12B-BF16-MTPv2",
+    "license": "nvidia-nemotron-open-model-license",
+    "hf_tags": [
+      "nemotron_h",
+      "text-generation",
+      "nvidia",
+      "megatron-lm",
+      "nemotron-3",
+      "mtp",
+      "speculative-decoding",
+      "dataset:nvidia/Nemotron-Post-Training-Dataset-v2"
+    ]
+  },
+  {
+    "name": "MiniCPM5-2B",
+    "provider": "OpenBMB",
+    "deployment": "open_source",
+    "aa_slug": "minicpm5-2b",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 12.5,
+      "aa_coding_index": 14.5,
+      "aa_agentic_index": 6.7
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "장문 컨텍스트",
+      "에이전틱 작업",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 2,
+    "weights_verified": true,
+    "hf_id": "openbmb/MiniCPM5-2B",
+    "hf_url": "https://huggingface.co/openbmb/MiniCPM5-2B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "minicpm",
+      "minicpm5",
+      "long-context",
+      "tool-calling",
+      "on-device",
+      "edge-ai",
+      "conversational",
+      "en",
+      "zh",
+      "dataset:openbmb/Ultra-FineWeb",
+      "dataset:openbmb/UltraX-Preview",
+      "dataset:openbmb/Ultra-FineWeb-L3",
+      "dataset:openbmb/UltraData-Math",
+      "dataset:openbmb/UltraData-Code",
+      "dataset:openbmb/UltraData-SFT-2605",
+      "dataset:openbmb/UltraData-SFT-Agent-2609",
+      "dataset:openbmb/UltraData-RL-2609"
+    ]
+  },
+  {
+    "name": "Mistral Small 4 (Reasoning)",
+    "provider": "Mistral",
+    "deployment": "open_source",
+    "aa_slug": "mistral-small-4",
+    "release_date": "2026-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 11.3,
+      "aa_coding_index": 26.6,
+      "aa_agentic_index": 0.8
+    },
+    "speed": {
+      "ttft_ms": 730,
+      "ttfa_ms": 12480,
+      "e2e_response_ms": 15420,
+      "throughput_tps": 170.22
+    },
+    "pricing": {
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.6,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.0451,
+      "input_cost_per_task_usd": 0.0364,
+      "reasoning_cost_per_task_usd": 0.0057,
+      "answer_cost_per_task_usd": 0.003,
+      "reasoning_tokens_per_task": 9420
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": null,
+    "weights_verified": true,
+    "hf_id": "mistralai/Mistral-Small-4-119B-2603",
+    "hf_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "mistral3",
+      "vLLM",
+      "en",
+      "fr",
+      "de",
+      "es",
+      "pt",
+      "it",
+      "ja",
+      "ko",
+      "ru",
+      "zh",
+      "ar",
+      "fa",
+      "id",
+      "ms",
+      "ne",
+      "pl",
+      "ro",
+      "sr",
+      "sv",
+      "tr",
+      "uk",
+      "vi",
+      "hi",
+      "bn",
+      "fp8",
+      "deploy:azure"
+    ]
+  },
+  {
+    "name": "Granite 4.2 8B",
+    "provider": "IBM",
+    "deployment": "open_source",
+    "aa_slug": "granite-4-2-8b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 11.1,
+      "aa_coding_index": 22.4,
+      "aa_agentic_index": 1.3
+    },
+    "speed": {
+      "ttft_ms": 880,
+      "ttfa_ms": 21590,
+      "e2e_response_ms": 26770,
+      "throughput_tps": 96.57
+    },
+    "pricing": {
+      "input_per_1m": 0.06,
+      "output_per_1m": 0.25,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.0236,
+      "input_cost_per_task_usd": 0.0152,
+      "reasoning_cost_per_task_usd": 0.0055,
+      "answer_cost_per_task_usd": 0.0029,
+      "reasoning_tokens_per_task": 21820
+    },
+    "context_window": null,
+    "specialization": [
+      "추론",
+      "에이전틱 작업",
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 8,
+    "weights_verified": true,
+    "hf_id": "ibm-granite/granite-4.2-8b",
+    "hf_url": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "granite",
+      "text-generation",
+      "granite-4.2",
+      "reasoning",
+      "thinking",
+      "tool-calling",
+      "ibm",
+      "conversational",
+      "en",
+      "de",
+      "es",
+      "fr",
+      "ja",
+      "pt",
+      "ar",
+      "cs",
+      "it",
+      "ko",
+      "nl",
+      "zh"
+    ]
+  },
+  {
+    "name": "Solar Open 100B (Reasoning)",
+    "provider": "Upstage",
+    "deployment": "open_source",
+    "aa_slug": "solar-open-100b-reasoning",
+    "release_date": "2025-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 10.4,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원"
+    ],
+    "description": "",
+    "params_b": 100,
+    "weights_verified": true,
+    "hf_id": "upstage/Solar-Open-100B",
+    "hf_url": "https://huggingface.co/upstage/Solar-Open-100B",
+    "license": "upstage-solar-license",
+    "hf_tags": [
+      "solar_open",
+      "text-generation",
+      "upstage",
+      "solar",
+      "moe",
+      "100b",
+      "llm",
+      "conversational",
+      "en",
+      "ko"
+    ]
+  },
+  {
+    "name": "Granite 4.2 3B",
+    "provider": "IBM",
+    "deployment": "open_source",
+    "aa_slug": "granite-4-2-3b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 9.1,
+      "aa_coding_index": 17.5,
+      "aa_agentic_index": 0.9
+    },
+    "speed": {
+      "ttft_ms": 460,
+      "ttfa_ms": 9530,
+      "e2e_response_ms": 11790,
+      "throughput_tps": 220.69
+    },
+    "pricing": {
+      "input_per_1m": 0.03,
+      "output_per_1m": 0.12,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.006,
+      "input_cost_per_task_usd": 0.0037,
+      "reasoning_cost_per_task_usd": 0.0013,
+      "answer_cost_per_task_usd": 0.0009,
+      "reasoning_tokens_per_task": 11204
+    },
+    "context_window": null,
+    "specialization": [
+      "추론",
+      "에이전틱 작업",
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 3,
+    "weights_verified": true,
+    "hf_id": "ibm-granite/granite-4.2-3b",
+    "hf_url": "https://huggingface.co/ibm-granite/granite-4.2-3b",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "granite",
+      "text-generation",
+      "granite-4.2",
+      "reasoning",
+      "thinking",
+      "tool-calling",
+      "ibm",
+      "conversational",
+      "en",
+      "de",
+      "es",
+      "fr",
+      "ja",
+      "pt",
+      "ar",
+      "cs",
+      "it",
+      "ko",
+      "nl",
+      "zh"
+    ]
+  },
+  {
+    "name": "MiniCPM5-1B (Reasoning)",
+    "provider": "OpenBMB",
+    "deployment": "open_source",
+    "aa_slug": "minicpm5-1b",
+    "release_date": "2026-05",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 8.8,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "장문 컨텍스트",
+      "에이전틱 작업",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 1,
+    "weights_verified": true,
+    "hf_id": "openbmb/MiniCPM5-1B",
+    "hf_url": "https://huggingface.co/openbmb/MiniCPM5-1B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "minicpm",
+      "minicpm5",
+      "long-context",
+      "tool-calling",
+      "on-device",
+      "edge-ai",
+      "conversational",
+      "en",
+      "zh",
+      "dataset:openbmb/Ultra-FineWeb",
+      "dataset:openbmb/Ultra-FineWeb-L3",
+      "dataset:openbmb/UltraData-Math",
+      "dataset:openbmb/UltraData-SFT-2605",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "Devstral Small (May '25)",
+    "provider": "Mistral",
+    "deployment": "open_source",
+    "aa_slug": "devstral-small-2505",
+    "release_date": "2025-05",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 8.7,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "코딩",
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 23.57,
+    "weights_verified": true,
+    "hf_id": "mistralai/Devstral-Small-2505",
+    "hf_url": "https://huggingface.co/mistralai/Devstral-Small-2505",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "vllm",
+      "mistral",
+      "mistral-common",
+      "en",
+      "fr",
+      "de",
+      "es",
+      "pt",
+      "it",
+      "ja",
+      "ko",
+      "ru",
+      "zh",
+      "ar",
+      "fa",
+      "id",
+      "ms",
+      "ne",
+      "pl",
+      "ro",
+      "sr",
+      "sv",
+      "tr",
+      "uk",
+      "vi",
+      "hi",
+      "bn"
+    ]
+  },
+  {
+    "name": "LFM2.5-2.6B",
+    "provider": "Liquid AI",
+    "deployment": "open_source",
+    "aa_slug": "lfm2-5-2-6b",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 8.4,
+      "aa_coding_index": 7.7,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 2.6,
+    "weights_verified": true,
+    "hf_id": "LiquidAI/LFM2.5-2.6B",
+    "hf_url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+    "license": "lfm1.0",
+    "hf_tags": [
+      "lfm2",
+      "text-generation",
+      "liquid",
+      "lfm2.5",
+      "edge",
+      "conversational",
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "de",
+      "hi",
+      "id",
+      "it",
+      "ja",
+      "ko",
+      "pl",
+      "pt",
+      "ru",
+      "es",
+      "th",
+      "vi"
+    ]
+  },
+  {
+    "name": "Llama 4 Scout",
+    "provider": "Meta",
+    "deployment": "open_source",
+    "aa_slug": "llama-4-scout",
+    "release_date": "2025-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 8.1,
+      "aa_coding_index": 8.2,
+      "aa_agentic_index": 0.5
+    },
+    "speed": {
+      "ttft_ms": 870,
+      "ttfa_ms": 870,
+      "e2e_response_ms": 5740,
+      "throughput_tps": 102.48
+    },
+    "pricing": {
+      "input_per_1m": 0.19,
+      "output_per_1m": 0.68,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 108.64,
+    "weights_verified": true,
+    "hf_id": "meta-llama/Llama-4-Scout-17B-16E",
+    "hf_url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E",
+    "license": "llama4",
+    "hf_tags": [
+      "llama4",
+      "image-text-to-text",
+      "facebook",
+      "meta",
+      "llama",
+      "conversational",
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "it",
+      "pt",
+      "th",
+      "tl",
+      "vi"
+    ]
+  },
+  {
+    "name": "Hermes 4 - Llama-3.1 70B (Reasoning)",
+    "provider": "Nous Research",
+    "deployment": "open_source",
+    "aa_slug": "hermes-4-llama-3-1-70b-reasoning",
+    "release_date": "2025-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.9,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "추론"
+    ],
+    "description": "",
+    "params_b": 70,
+    "weights_verified": true,
+    "hf_id": "NousResearch/Hermes-4-70B",
+    "hf_url": "https://huggingface.co/NousResearch/Hermes-4-70B",
+    "license": "llama3",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "Llama-3.1",
+      "instruct",
+      "finetune",
+      "reasoning",
+      "hybrid-mode",
+      "chatml",
+      "function calling",
+      "tool use",
+      "json mode",
+      "structured outputs",
+      "atropos",
+      "dataforge",
+      "long context",
+      "roleplaying",
+      "chat",
+      "conversational",
+      "en"
+    ]
+  },
+  {
+    "name": "Llama 3.3 Instruct 70B",
+    "provider": "Meta",
+    "deployment": "open_source",
+    "aa_slug": "llama-3-3-instruct-70b",
+    "release_date": "2024-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.7,
+      "aa_coding_index": 11.9,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 1560,
+      "ttfa_ms": 1560,
+      "e2e_response_ms": 7700,
+      "throughput_tps": 81.49
+    },
+    "pricing": {
+      "input_per_1m": 0.71,
+      "output_per_1m": 0.72,
+      "cache_hit_per_1m": 0.71,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 70,
+    "weights_verified": true,
+    "hf_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "hf_url": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+    "license": "llama3.3",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "facebook",
+      "meta",
+      "llama-3",
+      "conversational",
+      "en",
+      "fr",
+      "it",
+      "pt",
+      "hi",
+      "es",
+      "th",
+      "de"
+    ]
+  },
+  {
+    "name": "Hermes 4 - Llama-3.1 405B (Reasoning)",
+    "provider": "Nous Research",
+    "deployment": "open_source",
+    "aa_slug": "hermes-4-llama-3-1-405b-reasoning",
+    "release_date": "2025-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.5,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2460,
+      "ttfa_ms": 52400,
+      "e2e_response_ms": 64880,
+      "throughput_tps": 40.05
+    },
+    "pricing": {
+      "input_per_1m": 1,
+      "output_per_1m": 3,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "추론"
+    ],
+    "description": "",
+    "params_b": 405,
+    "weights_verified": true,
+    "hf_id": "NousResearch/Hermes-4-405B",
+    "hf_url": "https://huggingface.co/NousResearch/Hermes-4-405B",
+    "license": "llama3",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "Llama-3.1",
+      "instruct",
+      "finetune",
+      "reasoning",
+      "hybrid-mode",
+      "chatml",
+      "function calling",
+      "tool use",
+      "json mode",
+      "structured outputs",
+      "atropos",
+      "dataforge",
+      "long context",
+      "roleplaying",
+      "chat",
+      "conversational",
+      "en"
+    ]
+  },
+  {
+    "name": "Llama 3.1 Instruct 405B",
+    "provider": "Meta",
+    "deployment": "open_source",
+    "aa_slug": "llama-3-1-instruct-405b",
+    "release_date": "2024-07",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.3,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 405,
+    "weights_verified": true,
+    "hf_id": "meta-llama/Llama-3.1-405B-Instruct",
+    "hf_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct",
+    "license": "llama3.1",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "facebook",
+      "meta",
+      "llama-3",
+      "conversational",
+      "en",
+      "de",
+      "fr",
+      "it",
+      "pt",
+      "hi",
+      "es",
+      "th"
+    ]
+  },
+  {
+    "name": "LFM2.5-8B-A1B",
+    "provider": "Liquid AI",
+    "deployment": "open_source",
+    "aa_slug": "lfm2-5-8b-a1b",
+    "release_date": "2026-05",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.2,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 8,
+    "weights_verified": true,
+    "hf_id": "LiquidAI/LFM2.5-8B-A1B",
+    "hf_url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B",
+    "license": "lfm1.0",
+    "hf_tags": [
+      "lfm2_moe",
+      "text-generation",
+      "liquid",
+      "lfm2.5",
+      "edge",
+      "conversational",
+      "en",
+      "ar",
+      "zh",
+      "fr",
+      "de",
+      "ja",
+      "ko",
+      "es",
+      "pt",
+      "it"
+    ]
+  },
+  {
+    "name": "Llama 3.1 Tulu3 405B",
+    "provider": "Allen Institute for AI",
+    "deployment": "open_source",
+    "aa_slug": "tulu3-405b",
+    "release_date": "2025-01",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.2,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 405,
+    "weights_verified": true,
+    "hf_id": "allenai/Llama-3.1-Tulu-3-405B",
+    "hf_url": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+    "license": "llama3.1",
+    "hf_tags": [
+      "llama",
+      "text-generation",
+      "conversational",
+      "en",
+      "dataset:allenai/RLVR-MATH"
+    ]
+  },
+  {
+    "name": "Olmo 3.1 32B Think",
+    "provider": "Allen Institute for AI",
+    "deployment": "open_source",
+    "aa_slug": "olmo-3-1-32b-think",
+    "release_date": "2025-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 7.1,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 32,
+    "weights_verified": true,
+    "hf_id": "allenai/Olmo-3.1-32B-Think",
+    "hf_url": "https://huggingface.co/allenai/Olmo-3.1-32B-Think",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "olmo3",
+      "text-generation",
+      "conversational",
+      "en",
+      "dataset:allenai/Dolci-Think-RL"
+    ]
+  },
+  {
+    "name": "Olmo 3.1 32B Instruct",
+    "provider": "Allen Institute for AI",
+    "deployment": "open_source",
+    "aa_slug": "olmo-3-1-32b-instruct",
+    "release_date": "2026-01",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6.5,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 32,
+    "weights_verified": true,
+    "hf_id": "allenai/Olmo-3.1-32B-Instruct",
+    "hf_url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "olmo3",
+      "text-generation",
+      "conversational",
+      "en",
+      "dataset:allenai/Dolci-Instruct-RL"
+    ]
+  },
+  {
+    "name": "Phi-4 Mini Instruct",
+    "provider": "Microsoft",
+    "deployment": "open_source",
+    "aa_slug": "phi-4-mini",
+    "release_date": "2024-02",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6.3,
+      "aa_coding_index": 3.8,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 860,
+      "ttfa_ms": 860,
+      "e2e_response_ms": 11880,
+      "throughput_tps": 45.36
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "코딩",
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 3.84,
+    "weights_verified": true,
+    "hf_id": "microsoft/Phi-4-mini-instruct",
+    "hf_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "license": "mit",
+    "hf_tags": [
+      "phi3",
+      "text-generation",
+      "nlp",
+      "code",
+      "conversational",
+      "multilingual",
+      "ar",
+      "zh",
+      "cs",
+      "da",
+      "nl",
+      "en",
+      "fi",
+      "fr",
+      "de",
+      "he",
+      "hu",
+      "it",
+      "ja",
+      "ko",
+      "no",
+      "pl",
+      "pt",
+      "ru",
+      "es",
+      "sv",
+      "th",
+      "tr",
+      "uk",
+      "deploy:sagemaker"
+    ]
+  },
+  {
+    "name": "DeepHermes 3 - Mistral 24B Preview (Non-reasoning)",
+    "provider": "Nous Research",
+    "deployment": "open_source",
+    "aa_slug": "deephermes-3-mistral-24b-preview",
+    "release_date": "2025-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6.1,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "추론"
+    ],
+    "description": "",
+    "params_b": 24,
+    "weights_verified": true,
+    "hf_id": "NousResearch/DeepHermes-3-Mistral-24B-Preview",
+    "hf_url": "https://huggingface.co/NousResearch/DeepHermes-3-Mistral-24B-Preview",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "mistral",
+      "text-generation",
+      "Mistral-Small",
+      "instruct",
+      "finetune",
+      "chatml",
+      "gpt4",
+      "synthetic data",
+      "distillation",
+      "function calling",
+      "json mode",
+      "axolotl",
+      "roleplaying",
+      "chat",
+      "reasoning",
+      "r1",
+      "vllm",
+      "conversational",
+      "en"
+    ]
+  },
+  {
+    "name": "Jamba 1.7 Large",
+    "provider": "AI21 Labs",
+    "deployment": "open_source",
+    "aa_slug": "jamba-1-7-large",
+    "release_date": "2025-07",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6.1,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 398.56,
+    "weights_verified": true,
+    "hf_id": "ai21labs/AI21-Jamba-Large-1.7",
+    "hf_url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7",
+    "license": "jamba-open-model-license",
+    "hf_tags": [
+      "jamba"
+    ]
+  },
+  {
+    "name": "Jamba 1.6 Large",
+    "provider": "AI21 Labs",
+    "deployment": "open_source",
+    "aa_slug": "jamba-1-6-large",
+    "release_date": "2025-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "범용"
+    ],
+    "description": "",
+    "params_b": 398.56,
+    "weights_verified": true,
+    "hf_id": "ai21labs/AI21-Jamba-Large-1.6",
+    "hf_url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.6",
+    "license": "jamba-open-model-license",
+    "hf_tags": [
+      "jamba",
+      "text-generation",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Jamba 1.5 Large",
+    "provider": "AI21 Labs",
+    "deployment": "open_source",
+    "aa_slug": "jamba-1-5-large",
+    "release_date": "2024-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 6,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 8,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 398.56,
+    "weights_verified": true,
+    "hf_id": "ai21labs/AI21-Jamba-Large-1.5",
+    "hf_url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.5",
+    "license": "jamba-open-model-license",
+    "hf_tags": [
+      "jamba",
+      "mamba",
+      "moe",
+      "text-generation",
+      "conversational",
+      "en",
+      "fr",
+      "de",
+      "nl",
+      "es",
+      "pt",
+      "it",
+      "ar",
+      "he"
+    ]
+  },
+  {
+    "name": "LFM2 24B A2B",
+    "provider": "Liquid AI",
+    "deployment": "open_source",
+    "aa_slug": "lfm2-24b-a2b",
+    "release_date": "2026-02",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.9,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "한국어 지원",
+      "다국어"
+    ],
+    "description": "",
+    "params_b": 24,
+    "weights_verified": true,
+    "hf_id": "LiquidAI/LFM2-24B-A2B",
+    "hf_url": "https://huggingface.co/LiquidAI/LFM2-24B-A2B",
+    "license": "lfm1.0",
+    "hf_tags": [
+      "lfm2_moe",
+      "text-generation",
+      "liquid",
+      "lfm2",
+      "edge",
+      "conversational",
+      "en",
+      "ar",
+      "zh",
+      "fr",
+      "de",
+      "ja",
+      "ko",
+      "es",
+      "pt",
+      "deploy:azure"
+    ]
+  },
+  {
+    "name": "Phi-4",
+    "provider": "Microsoft",
+    "deployment": "open_source",
+    "aa_slug": "phi-4",
+    "release_date": "2024-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.9,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2780,
+      "ttfa_ms": 2780,
+      "e2e_response_ms": 16220,
+      "throughput_tps": 37.2
+    },
+    "pricing": {
+      "input_per_1m": 0.13,
+      "output_per_1m": 0.5,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "수학",
+      "코딩"
+    ],
+    "description": "",
+    "params_b": 14.66,
+    "weights_verified": true,
+    "hf_id": "microsoft/phi-4",
+    "hf_url": "https://huggingface.co/microsoft/phi-4",
+    "license": "mit",
+    "hf_tags": [
+      "phi3",
+      "text-generation",
+      "phi",
+      "nlp",
+      "math",
+      "code",
+      "chat",
+      "conversational",
+      "en",
+      "deploy:azure"
+    ]
+  },
+  {
+    "name": "Phi-4 Multimodal Instruct",
+    "provider": "Microsoft",
+    "deployment": "open_source",
+    "aa_slug": "phi-4-multimodal",
+    "release_date": "2025-02",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.8,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 830,
+      "ttfa_ms": 830,
+      "e2e_response_ms": 30420,
+      "throughput_tps": 16.9
+    },
+    "pricing": {
+      "input_per_1m": 0,
+      "output_per_1m": 0,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "specialization": [
+      "코딩",
+      "멀티모달",
+      "한국어 지원",
+      "다국어",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 5.57,
+    "weights_verified": true,
+    "hf_id": "microsoft/Phi-4-multimodal-instruct",
+    "hf_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "license": "mit",
+    "hf_tags": [
+      "phi4mm",
+      "text-generation",
+      "nlp",
+      "code",
+      "audio",
+      "automatic-speech-recognition",
+      "speech-summarization",
+      "speech-translation",
+      "visual-question-answering",
+      "phi-4-multimodal",
+      "phi",
+      "phi-4-mini",
+      "multilingual",
+      "ar",
+      "zh",
+      "cs",
+      "da",
+      "nl",
+      "en",
+      "fi",
+      "fr",
+      "de",
+      "he",
+      "hu",
+      "it",
+      "ja",
+      "ko",
+      "no",
+      "pl",
+      "pt"
+    ]
+  },
+  {
+    "name": "MiniCPM-V 4.6 1.3B",
+    "provider": "OpenBMB",
+    "deployment": "open_source",
+    "aa_slug": "minicpm-v4-6-1-3b",
+    "release_date": "2026-05",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.7,
+      "aa_coding_index": 0.7,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "specialization": [
+      "멀티모달",
+      "저비용·경량"
+    ],
+    "description": "",
+    "params_b": 1.3,
+    "weights_verified": true,
+    "hf_id": "openbmb/MiniCPM-V-4.6",
+    "hf_url": "https://huggingface.co/openbmb/MiniCPM-V-4.6",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "minicpmv4_6",
+      "image-text-to-text",
+      "minicpm-v",
+      "multimodal",
+      "On-Device Model",
+      "lightweight",
+      "conversational"
+    ]
+  },
+  {
+    "name": "Claude 3 Haiku",
+    "provider": "Anthropic",
+    "deployment": "api",
+    "aa_slug": "claude-3-haiku",
+    "release_date": "2024-03",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.6,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0.25,
+      "output_per_1m": 1.25,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Claude 4.5 Haiku (Reasoning)",
+    "provider": "Anthropic",
+    "deployment": "api",
+    "aa_slug": "claude-4-5-haiku-reasoning",
+    "release_date": "2025-10",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 16.9,
+      "aa_coding_index": 43.9,
+      "aa_agentic_index": 8
+    },
+    "speed": {
+      "ttft_ms": 23100,
+      "ttfa_ms": 23100,
+      "e2e_response_ms": 27920,
+      "throughput_tps": 103.71
+    },
+    "pricing": {
+      "input_per_1m": 1,
+      "output_per_1m": 5,
+      "cache_hit_per_1m": 0.1,
+      "cache_write_per_1m": 1.25,
+      "cost_per_task_usd": 0.2077,
+      "input_cost_per_task_usd": 0.1153,
+      "reasoning_cost_per_task_usd": 0.0383,
+      "answer_cost_per_task_usd": 0.0541,
+      "reasoning_tokens_per_task": 7665
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "GPT-5 nano (high)",
+    "provider": "OpenAI",
+    "deployment": "api",
+    "aa_slug": "gpt-5-nano",
+    "release_date": "2025-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 13,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 96010,
+      "ttfa_ms": 96010,
+      "e2e_response_ms": 98760,
+      "throughput_tps": 181.86
+    },
+    "pricing": {
+      "input_per_1m": 0.05,
+      "output_per_1m": 0.4,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Nova Micro",
+    "provider": "Amazon",
+    "deployment": "api",
+    "aa_slug": "nova-micro",
+    "release_date": "2024-12",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.9,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 860,
+      "ttfa_ms": 860,
+      "e2e_response_ms": 2710,
+      "throughput_tps": 270
+    },
+    "pricing": {
+      "input_per_1m": 0.04,
+      "output_per_1m": 0.14,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Gemini 2.5 Flash-Lite (Reasoning)",
+    "provider": "Google",
+    "deployment": "api",
+    "aa_slug": "gemini-2-5-flash-lite-reasoning",
+    "release_date": "2025-06",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 8.5,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 20980,
+      "ttfa_ms": 20980,
+      "e2e_response_ms": 22420,
+      "throughput_tps": 348.96
+    },
+    "pricing": {
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.4,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Muse Spark 1.3 (max)",
+    "provider": "Meta",
+    "deployment": "api",
+    "aa_slug": "muse-spark-1-3",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 48.1,
+      "aa_coding_index": 75.8,
+      "aa_agentic_index": 55.5
+    },
+    "speed": {
+      "ttft_ms": 21280,
+      "ttfa_ms": 30340,
+      "e2e_response_ms": 32600,
+      "throughput_tps": 220.8
+    },
+    "pricing": {
+      "input_per_1m": 1.25,
+      "output_per_1m": 4.25,
+      "cache_hit_per_1m": 0.15,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 1.6049,
+      "input_cost_per_task_usd": 1.349,
+      "reasoning_cost_per_task_usd": 0.145,
+      "answer_cost_per_task_usd": 0.1108,
+      "reasoning_tokens_per_task": 34126
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Jamba Reasoning 3B",
+    "provider": "AI21 Labs",
+    "deployment": "open_source",
+    "aa_slug": "jamba-reasoning-3b",
+    "release_date": "2025-10",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 5.7,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "params_b": 3,
+    "weights_verified": true,
+    "hf_id": "ai21labs/AI21-Jamba-Reasoning-3B",
+    "hf_url": "https://huggingface.co/ai21labs/AI21-Jamba-Reasoning-3B",
+    "license": "apache-2.0",
+    "hf_tags": [
+      "jamba",
+      "text-generation",
+      "conversational"
+    ],
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Gemini 3.8 Flash (medium)",
+    "provider": "Google",
+    "deployment": "api",
+    "aa_slug": "gemini-3-8-flash-medium",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 39.8,
+      "aa_coding_index": 74.1,
+      "aa_agentic_index": 39.7
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0.75,
+      "output_per_1m": 3.75,
+      "cache_hit_per_1m": 0.07,
+      "cache_write_per_1m": 0.75,
+      "cost_per_task_usd": 0.931,
+      "input_cost_per_task_usd": 0.7338,
+      "reasoning_cost_per_task_usd": 0.1011,
+      "answer_cost_per_task_usd": 0.0962,
+      "reasoning_tokens_per_task": 26956
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "GPT-6 Sol (max)",
+    "provider": "OpenAI",
+    "deployment": "api",
+    "aa_slug": "gpt-6-sol",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 47.5,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 107180,
+      "ttfa_ms": 107180,
+      "e2e_response_ms": 111150,
+      "throughput_tps": 126.04
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 10,
+      "cache_hit_per_1m": 0.2,
+      "cache_write_per_1m": 2.5,
+      "cost_per_task_usd": 1.0564,
+      "input_cost_per_task_usd": 0.744,
+      "reasoning_cost_per_task_usd": 0.2102,
+      "answer_cost_per_task_usd": 0.1021,
+      "reasoning_tokens_per_task": 21024
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Qwen3.8 Max (0902)",
+    "provider": "Alibaba",
+    "deployment": "api",
+    "aa_slug": "qwen3-8-max",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 45.4,
+      "aa_coding_index": 76.2,
+      "aa_agentic_index": 56
+    },
+    "speed": {
+      "ttft_ms": 2970,
+      "ttfa_ms": 53880,
+      "e2e_response_ms": 66600,
+      "throughput_tps": 39.29
+    },
+    "pricing": {
+      "input_per_1m": 2,
+      "output_per_1m": 6,
+      "cache_hit_per_1m": 0.25,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 5.4085,
+      "input_cost_per_task_usd": 4.7621,
+      "reasoning_cost_per_task_usd": 0.425,
+      "answer_cost_per_task_usd": 0.2214,
+      "reasoning_tokens_per_task": 70830
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": false,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Gemini 3.8 Flash (high)",
+    "provider": "Google",
+    "deployment": "api",
+    "aa_slug": "gemini-3-8-flash",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 40.9,
+      "aa_coding_index": 76.3,
+      "aa_agentic_index": 40.2
+    },
+    "speed": {
+      "ttft_ms": 15010,
+      "ttfa_ms": 15010,
+      "e2e_response_ms": 16700,
+      "throughput_tps": 296.81
+    },
+    "pricing": {
+      "input_per_1m": 0.75,
+      "output_per_1m": 3.75,
+      "cache_hit_per_1m": 0.07,
+      "cache_write_per_1m": 0.75,
+      "cost_per_task_usd": 1.2428,
+      "input_cost_per_task_usd": 0.9765,
+      "reasoning_cost_per_task_usd": 0.1602,
+      "answer_cost_per_task_usd": 0.106,
+      "reasoning_tokens_per_task": 42727
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Solar Pro 4",
+    "provider": "Upstage",
+    "deployment": "api",
+    "aa_slug": "solar-pro4",
+    "release_date": "2026-08",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 28.2,
+      "aa_coding_index": 52.7,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 2000,
+      "ttfa_ms": 35310,
+      "e2e_response_ms": 43640,
+      "throughput_tps": 60.04
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "cache_hit_per_1m": 0.06,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": false,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Nova 2.0 Pro Preview (medium)",
+    "provider": "Amazon",
+    "deployment": "api",
+    "aa_slug": "nova-2-0-pro-reasoning-medium",
+    "release_date": "2025-11",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 14.2,
+      "aa_coding_index": 34,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 15070,
+      "ttfa_ms": 31740,
+      "e2e_response_ms": 35910,
+      "throughput_tps": 119.92
+    },
+    "pricing": {
+      "input_per_1m": 1.25,
+      "output_per_1m": 10,
+      "cache_hit_per_1m": 0.31,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null,
+      "input_cost_per_task_usd": null,
+      "reasoning_cost_per_task_usd": null,
+      "answer_cost_per_task_usd": null,
+      "reasoning_tokens_per_task": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Mistral Medium 3.5",
+    "provider": "Mistral",
+    "deployment": "api",
+    "aa_slug": "mistral-medium-3-5",
+    "release_date": "2026-04",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 14.2,
+      "aa_coding_index": 46.9,
+      "aa_agentic_index": 7
+    },
+    "speed": {
+      "ttft_ms": 2260,
+      "ttfa_ms": 16470,
+      "e2e_response_ms": 20020,
+      "throughput_tps": 140.73
+    },
+    "pricing": {
+      "input_per_1m": 1.5,
+      "output_per_1m": 7.5,
+      "cache_hit_per_1m": 0.15,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": 0.437,
+      "input_cost_per_task_usd": 0.2413,
+      "reasoning_cost_per_task_usd": 0.1051,
+      "answer_cost_per_task_usd": 0.0905,
+      "reasoning_tokens_per_task": 14020
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+    "provider": "Anthropic",
+    "deployment": "api",
+    "aa_slug": "claude-opus-5-5",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 57.6,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 4,
+      "output_per_1m": 20,
+      "cache_hit_per_1m": 0.2,
+      "cache_write_per_1m": 5,
+      "cost_per_task_usd": 5.982,
+      "input_cost_per_task_usd": 3.5987,
+      "reasoning_cost_per_task_usd": 1.6786,
+      "answer_cost_per_task_usd": 0.7047,
+      "reasoning_tokens_per_task": 83929
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "범용"
+    ],
+    "description": ""
+  },
+  {
+    "name": "GPT-6 Luna (max)",
+    "provider": "OpenAI",
+    "deployment": "api",
+    "aa_slug": "gpt-6-luna",
+    "release_date": "2026-09",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 37.3,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": 142580,
+      "ttfa_ms": 142580,
+      "e2e_response_ms": 145760,
+      "throughput_tps": 157.24
+    },
+    "pricing": {
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.5,
+      "cache_hit_per_1m": 0.01,
+      "cache_write_per_1m": 0.13,
+      "cost_per_task_usd": 0.0681,
+      "input_cost_per_task_usd": 0.0428,
+      "reasoning_cost_per_task_usd": 0.0197,
+      "answer_cost_per_task_usd": 0.0056,
+      "reasoning_tokens_per_task": 39300
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": ""
+  },
+  {
+    "name": "Nova 2.0 Omni (medium)",
+    "provider": "Amazon",
+    "deployment": "api",
+    "aa_slug": "nova-2-0-omni-reasoning-medium",
+    "release_date": "2025-11",
+    "benchmarks": {
+      "mmlu_pro": null,
+      "gpqa": null,
+      "swebench": null,
+      "livecodebench": null,
+      "math": null,
+      "aime": null,
+      "mmmu": null,
+      "arena_elo": null,
+      "aa_intelligence_index": 13.6,
+      "aa_coding_index": null,
+      "aa_agentic_index": null
+    },
+    "speed": {
+      "ttft_ms": null,
+      "ttfa_ms": null,
+      "e2e_response_ms": null,
+      "throughput_tps": null
+    },
+    "pricing": {
+      "input_per_1m": 0.3,
+      "output_per_1m": 2.5,
+      "cache_hit_per_1m": null,
+      "cache_write_per_1m": null,
+      "cost_per_task_usd": null
+    },
+    "context_window": null,
+    "params_b": null,
+    "weights_verified": null,
+    "hf_id": null,
+    "hf_url": null,
+    "license": null,
+    "hf_tags": [],
+    "specialization": [
+      "저비용·경량"
+    ],
+    "description": ""
+  }
+]
