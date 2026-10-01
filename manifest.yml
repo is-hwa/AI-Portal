@@ -1,0 +1,27 @@
+# cf push 설정. 배포 전에 반드시 `npm run build`로 dist/를 만들어야 한다
+# (`npm run deploy`가 빌드 + push를 한 번에 한다). CF Node 빌드팩은 운영 의존성만
+# 설치하고 Vite 빌드는 하지 않기 때문에, 빌드 결과(dist/)를 같이 올리는 방식이다.
+applications:
+  - name: ai-portal
+    memory: 512M
+    disk_quota: 1G
+    # 수집 크론이 서버 프로세스 안에서 돈다. 인스턴스를 늘리면 수집도 그만큼 중복되고
+    # HF 한도를 나눠 쓰게 되므로 1개로 둔다.
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    command: node server/index.js
+    health-check-type: http
+    health-check-http-endpoint: /api/health
+    env:
+      NODE_ENV: production
+      # 일별 기록 날짜와 새벽 3시 크론을 한국 시간 기준으로.
+      TZ: Asia/Seoul
+      # 사내망에서 외부로 나갈 때 프록시가 필요하면 주석을 풀고 주소를 넣는다.
+      # HTTPS_PROXY: http://proxy.example.com:8080
+      # NO_PROXY: localhost,.internal
+      # HF 읽기 토큰은 manifest에 쓰지 말고 `cf set-env ai-portal HF_TOKEN ...`로 넣는다.
+    # Postgres를 바인딩하면 수집 결과·추이 기록이 재시작·재배포 후에도 남는다.
+    # 없으면 컨테이너 디스크에 저장돼 재시작할 때마다 첫 수집부터 다시 한다.
+    # services:
+    #   - ai-portal-db

@@ -1,17 +1,15 @@
-import { readFile, writeFile } from 'fs/promises'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import { getDoc, putDoc } from '../storage.js'
 import { listModels, mapLimit } from './client.js'
 import { fillLineage, groupByRoot } from './canonical.js'
 import { enrichGroup, addDerivativeCounts } from './enrich.js'
 import { writeSnapshot, attachTrends } from './popularity.js'
 import { KNOWN_ORGS, orgOf } from './orgs.js'
 
-const DATA_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data')
-const MODELS_PATH = path.join(DATA_DIR, 'hf-models.json')
-const LINEAGE_PATH = path.join(DATA_DIR, 'hf-lineage.json')
-const HIDDEN_PATH = path.join(DATA_DIR, 'hf-hidden.json')
-const DETAIL_CACHE_PATH = path.join(DATA_DIR, 'hf-details.json')
+// 저장소 키 (storage.js — 로컬은 server/data/<키>.json, 배포 시 Postgres)
+const MODELS_KEY = 'hf-models'
+const LINEAGE_KEY = 'hf-lineage'
+const HIDDEN_KEY = 'hf-hidden'
+const DETAIL_CACHE_KEY = 'hf-details'
 
 // 화면의 카테고리 하나가 HF pipeline_tag 여러 개에 대응한다. 비전 LLM(Qwen3.8 등)은
 // HF에서 image-text-to-text로 분류되지만 쓰임새는 LLM이라 같은 칸에 넣는다.
@@ -38,25 +36,22 @@ export function familyName(name) {
   )
 }
 
-async function readJson(file, fallback) {
-  try {
-    return JSON.parse(await readFile(file, 'utf-8'))
-  } catch (err) {
-    if (err.code === 'ENOENT') return fallback
-    throw err
-  }
+const EMPTY_RESULT = {
+  updatedAt: null,
+  categories: CATEGORIES.map(({ id, label }) => ({ id, label })),
+  families: [],
 }
 
 export function readHfModels() {
-  return readJson(MODELS_PATH, { updatedAt: null, categories: CATEGORIES, families: [] })
+  return getDoc(MODELS_KEY, EMPTY_RESULT)
 }
 
 export function readHidden() {
-  return readJson(HIDDEN_PATH, [])
+  return getDoc(HIDDEN_KEY, [])
 }
 
-export async function writeHidden(ids) {
-  await writeFile(HIDDEN_PATH, JSON.stringify(ids, null, 2) + '\n', 'utf-8')
+export function writeHidden(ids) {
+  return putDoc(HIDDEN_KEY, ids)
 }
 
 function categoryOf(pipelineTag) {
@@ -124,15 +119,15 @@ export async function runHfCollect({ onProgress = () => {} } = {}) {
   onProgress(`리포 ${raw.length}개 수집`)
 
   onProgress('계보 확인 중 (파생 리포 → 원본)')
-  const lineage = await fillLineage(raw, await readJson(LINEAGE_PATH, {}))
-  await writeFile(LINEAGE_PATH, JSON.stringify(Object.fromEntries(lineage)) + '\n', 'utf-8')
+  const lineage = await fillLineage(raw, await getDoc(LINEAGE_KEY, {}))
+  await putDoc(LINEAGE_KEY, Object.fromEntries(lineage))
 
   const groups = groupByRoot(raw, lineage).filter(
     (g) => worthEnriching(g) && !hidden.has(g.root) && !hidden.has(g.repId),
   )
   onProgress(`원본 모델 ${groups.length}개로 정리, 상세 조회 중`)
 
-  const detailCache = await readJson(DETAIL_CACHE_PATH, {})
+  const detailCache = await getDoc(DETAIL_CACHE_KEY, {})
   const enriched = await mapLimit(groups, 6, (g) => enrichGroup(g, detailCache).catch(() => null))
   const models = enriched
     .filter(Boolean)
@@ -148,7 +143,7 @@ export async function runHfCollect({ onProgress = () => {} } = {}) {
   )
   onProgress(`파생 리포 수 집계 중 (${ranked.length}개)`)
   await mapLimit(ranked, 4, (m) => addDerivativeCounts(m, detailCache))
-  await writeFile(DETAIL_CACHE_PATH, JSON.stringify(detailCache) + '\n', 'utf-8')
+  await putDoc(DETAIL_CACHE_KEY, detailCache)
 
   await attachTrends(models)
   await writeSnapshot(models)
@@ -160,7 +155,7 @@ export async function runHfCollect({ onProgress = () => {} } = {}) {
     categories: CATEGORIES.map(({ id, label }) => ({ id, label })),
     families: buildFamilies(models),
   }
-  await writeFile(MODELS_PATH, JSON.stringify(result, null, 2) + '\n', 'utf-8')
+  await putDoc(MODELS_KEY, result)
   onProgress(`완료 — 모델 ${models.length}개 / 계열 ${result.families.length}개`)
   return result
 }

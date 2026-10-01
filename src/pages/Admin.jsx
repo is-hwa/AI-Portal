@@ -77,6 +77,11 @@ export default function Admin({ data, onCollected }) {
         >
           {status?.running ? '수집 중…' : '지금 수집'}
         </button>
+        {status?.storage && (
+          <p className="mt-2 text-xs text-slate-500">
+            저장소: {status.storage === 'postgres' ? 'Postgres (재시작해도 기록 유지)' : 'server/data 파일'}
+          </p>
+        )}
         <p className="mt-2 text-xs text-slate-400">
           HF 무료 한도(5분에 500건) 때문에 첫 수집은 10분 남짓 걸릴 수 있습니다. 이후엔 캐시로 빨라집니다.
         </p>

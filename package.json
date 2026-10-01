@@ -3,12 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.19"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "start": "node server/index.js",
+    "deploy": "npm run build && cf push"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
@@ -16,9 +21,8 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "node-cron": "^4.6.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "recharts": "^3.10.1"
+    "pg": "^8.23.1",
+    "undici": "^8.11.2"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -26,6 +30,9 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.1.0",
     "oxlint": "^1.79.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "recharts": "^3.10.1",
     "tailwindcss": "^4.3.3",
     "vite": "^8.2.2"
   }

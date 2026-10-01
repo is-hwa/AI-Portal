@@ -2,6 +2,8 @@ import cron from 'node-cron'
 import { startCollect, lastCollectedAt } from './collector.js'
 
 const SCHEDULE = '0 3 * * *' // 매일 새벽 3시
+// CF 컨테이너는 UTC라 시간대를 지정하지 않으면 한국 시간 낮 12시에 돈다.
+const TIMEZONE = process.env.TZ || 'Asia/Seoul'
 
 // 마지막 수집이 이보다 오래됐으면 서버가 켜지자마자 한 번 따라잡는다.
 const STALE_MS = 20 * 60 * 60 * 1000
@@ -18,7 +20,7 @@ async function catchUpIfStale() {
 }
 
 export function startScheduler() {
-  console.log(`[scheduler] 매일 새벽 3시(${SCHEDULE})에 HuggingFace 수집이 실행되도록 등록됨`)
-  cron.schedule(SCHEDULE, () => startCollect('야간 수집'))
-  catchUpIfStale()
+  console.log(`[scheduler] 매일 새벽 3시(${SCHEDULE}, ${TIMEZONE})에 HuggingFace 수집이 실행되도록 등록됨`)
+  cron.schedule(SCHEDULE, () => startCollect('야간 수집'), { timezone: TIMEZONE })
+  catchUpIfStale().catch((err) => console.error('[scheduler] 따라잡기 확인 실패:', err.message))
 }

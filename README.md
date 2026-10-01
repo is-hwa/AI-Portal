@@ -103,11 +103,46 @@ npm run server   # 백엔드 (3001)
 수집 결과·캐시·추이 기록(`server/data/hf-*`)은 git에 올리지 않습니다.
 **추이 기록은 서버 한 곳에 쌓여야 의미가 있으니** 집·회사에서 각각 돌리기보다 상시 켜 둘 서버 한 곳을 정하는 걸 권장합니다.
 
+### Cloud Foundry(TPCF) 배포
+
+```bash
+cf login -a <API 주소>
+npm run deploy          # = npm run build && cf push  (manifest.yml 사용)
+```
+
+CF Node 빌드팩은 운영 의존성만 설치하고 Vite 빌드는 하지 않아서, **로컬에서 빌드한 `dist/`를 함께 올립니다**
+(`.cfignore`가 `src/`·`node_modules/`·`.env`는 빼고 `dist/`는 남김). 그래서 `cf push`만 단독으로 하면
+마지막으로 빌드한 화면이 올라갑니다 — 항상 `npm run deploy`를 쓰세요.
+
+**Postgres 연결 (권장).** 컨테이너 디스크는 재시작·재배포 때마다 지워져서, DB 없이 올리면 매번 첫 수집부터 다시 하고
+추이 기록이 쌓이지 않습니다. 마켓플레이스에 Postgres가 있으면:
+
+```bash
+cf marketplace                                       # 쓸 수 있는 Postgres 서비스·플랜 확인
+cf create-service <postgres 서비스> <플랜> ai-portal-db
+```
+
+그다음 `manifest.yml`의 `services:` 주석을 풀고 다시 배포하면 됩니다. 바인딩 정보(`VCAP_SERVICES`)에서
+접속 주소를 자동으로 찾고 `app_docs` 테이블을 스스로 만듭니다. 관리 탭에 "저장소: Postgres"로 표시되면 연결된 것입니다.
+CF 밖의 DB를 쓰려면 `cf set-env ai-portal DATABASE_URL postgres://...`.
+
+**사내 프록시.** 앱에서 huggingface.co로 직접 못 나가면 `manifest.yml`의 `HTTPS_PROXY`/`NO_PROXY` 주석을 풀어 넣습니다.
+나가는지 확인: `cf ssh ai-portal -c "curl -sI https://huggingface.co | head -1"`
+
+**운영 메모**
+- 인스턴스는 1개로 둡니다. 수집 크론이 서버 안에서 돌아서 늘리면 수집이 중복됩니다
+- `TZ=Asia/Seoul`이라 새벽 3시 수집과 일별 기록 날짜가 한국 시간 기준입니다
+- 헬스체크는 `/api/health` (DB가 잠깐 끊겨도 앱을 재시작시키지 않음)
+- 로그: `cf logs ai-portal --recent`
+
 ### 환경 변수 (`.env`, 전부 선택)
 
 | 변수 | 용도 |
 | --- | --- |
 | `HF_TOKEN` | HF 읽기 토큰 — 한도가 넉넉해져 수집이 빨라짐 |
+| `DATABASE_URL` | Postgres 주소. 없으면 CF 바인딩 → 그것도 없으면 `server/data/` 파일 |
+| `HTTPS_PROXY`, `NO_PROXY` | 사내 프록시 |
+| `TZ` | 수집 시각·기록 날짜 시간대 (기본 Asia/Seoul) |
 | `GOOGLE_SEARCH_API_KEY`, `GOOGLE_SEARCH_CX` | 뉴스 탭에 국내 기사 추가 |
 | `PORT` | 기본 3001 |
 
@@ -120,7 +155,10 @@ server/
   index.js          Express 서버 + API + 정적 파일 서빙
   scheduler.js      매일 새벽 3시 수집 + 놓친 수집 따라잡기
   collector.js      수집 실행 상태(동시 실행 방지, 진행 로그)
+  storage.js        저장소: 파일 또는 Postgres(바인딩 자동 감지)
+  proxy.js          HTTPS_PROXY가 있으면 외부 요청을 프록시로
   hf/client.js      HF API 호출, 429 대기, 동시성 제한
+manifest.yml        cf push 설정 / .cfignore  올리지 않을 파일
   hf/pipeline.js    수집 → 묶기 → 보강 → 추이 → 계열 → hf-models.json
   hf/canonical.js   계보 따라 원본 찾기
   hf/enrich.js      상세 조회·파라미터·라이선스·특화·파생 수

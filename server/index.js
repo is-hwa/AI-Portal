@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import './proxy.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import express from 'express'
@@ -7,12 +8,19 @@ import { readHfModels, readHidden, writeHidden } from './hf/pipeline.js'
 import { startCollect, collectStatus } from './collector.js'
 import { startScheduler } from './scheduler.js'
 import { getNews } from './news.js'
+import { storageName } from './storage.js'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
 const PORT = process.env.PORT || 3001
+
+// CF 헬스체크용. 저장소·HF 상태와 무관하게 프로세스가 떠 있으면 200을 준다
+// (DB가 잠깐 끊겼다고 앱을 계속 재시작시키지 않으려고).
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true })
+})
 
 app.get('/api/hf/models', async (_req, res) => {
   const [data, hiddenList] = await Promise.all([readHfModels(), readHidden()])
@@ -23,8 +31,8 @@ app.get('/api/hf/models', async (_req, res) => {
   res.json({ ...data, families })
 })
 
-app.get('/api/hf/status', (_req, res) => {
-  res.json(collectStatus())
+app.get('/api/hf/status', async (_req, res) => {
+  res.json({ ...collectStatus(), storage: await storageName() })
 })
 
 app.post('/api/hf/refresh', (_req, res) => {
@@ -73,5 +81,8 @@ app.get(/^\/(?!api\/).*/, (_req, res) => {
 
 app.listen(PORT, () => {
   console.log(`[server] http://localhost:${PORT} 에서 실행 중`)
+  storageName()
+    .then((name) => console.log(`[server] 저장소: ${name === 'postgres' ? 'Postgres' : 'server/data 파일'}`))
+    .catch((err) => console.error('[server] 저장소 연결 실패:', err.message))
   startScheduler()
 })
