@@ -33,3 +33,6 @@ server/data/hf-models.json
 server/data/hf-lineage.json
 server/data/hf-details.json
 server/data/hf-history/
+
+# 배포용 압축 파일 (npm run bundle)
+deploy/

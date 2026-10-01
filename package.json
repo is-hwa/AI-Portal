@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "node server/index.js",
-    "deploy": "npm run build && cf push"
+    "deploy": "npm run build && cf push",
+    "bundle": "npm run build && node scripts/bundle.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

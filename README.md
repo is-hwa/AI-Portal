@@ -114,6 +114,20 @@ CF Node 빌드팩은 운영 의존성만 설치하고 Vite 빌드는 하지 않�
 (`.cfignore`가 `src/`·`node_modules/`·`.env`는 빼고 `dist/`는 남김). 그래서 `cf push`만 단독으로 하면
 마지막으로 빌드한 화면이 올라갑니다 — 항상 `npm run deploy`를 쓰세요.
 
+**Node가 없는 곳(Ops Manager VM 등)에서 배포할 때.** 빌드는 내 PC에서 하고 결과만 옮깁니다.
+
+```bash
+npm run bundle                                   # 내 PC: 빌드 + deploy/ai-portal.tgz 생성
+scp deploy/ai-portal.tgz ubuntu@<opsman 주소>:~/  # VM으로 복사
+```
+VM에서:
+```bash
+tar -xzf ai-portal.tgz && cd ai-portal
+cf target                                        # 올릴 org/space가 맞는지 먼저 확인
+cf push
+```
+패키지 설치는 CF 스테이징 때 빌드팩이 하므로 VM에는 cf만 있으면 됩니다.
+
 **Postgres 연결 (권장).** 컨테이너 디스크는 재시작·재배포 때마다 지워져서, DB 없이 올리면 매번 첫 수집부터 다시 하고
 추이 기록이 쌓이지 않습니다. 마켓플레이스에 Postgres가 있으면:
 
@@ -159,6 +173,7 @@ server/
   proxy.js          HTTPS_PROXY가 있으면 외부 요청을 프록시로
   hf/client.js      HF API 호출, 429 대기, 동시성 제한
 manifest.yml        cf push 설정 / .cfignore  올리지 않을 파일
+scripts/bundle.mjs  배포용 압축 파일 생성 (npm run bundle)
   hf/pipeline.js    수집 → 묶기 → 보강 → 추이 → 계열 → hf-models.json
   hf/canonical.js   계보 따라 원본 찾기
   hf/enrich.js      상세 조회·파라미터·라이선스·특화·파생 수
